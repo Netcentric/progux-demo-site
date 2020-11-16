@@ -1,4 +1,7 @@
+_site/
 node_modules/
-package-lock.json
-dist/*
-!dist/.progUX
+.DS_Store
+js/min.js
+js/min.js.map
+.vscode/
+.netlify/
