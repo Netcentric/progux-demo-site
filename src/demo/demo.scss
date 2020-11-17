@@ -1,13 +1,21 @@
-section {
-  border-bottom: 2px solid #fff;
-}
 #introduction {
   height: 500px;
-  background: url(demo/user-experience.jpg) no-repeat center center;
+  background: url(../../img/demo/user-experience.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  position: relative;
+}
+#introduction .container {
+  position: absolute;
+  top: 160px;
+  left: 100px;
+  padding: 20px 40px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.value-proposition {
+  margin-top: 50px;
 }
 html.connectionSpeed-slow #introduction {
   background: whitesmoke;
@@ -17,9 +25,6 @@ h1 {
 }
 h2, h3, h4 {
   color: #16b1a3;
-}
-.value-proposition {
-  margin-top: 100px;
 }
 .cta-buttons {
   margin-top: 50px;
@@ -36,6 +41,11 @@ h2, h3, h4 {
 }
 .benefits-boxes {
   margin: 100px auto;
+  display: flex;
+  justify-content: space-around;
+}
+.benefits-box {
+  width: 25%;
 }
 .benefits-text {
   padding: 0px 5px;
@@ -45,12 +55,11 @@ h2, h3, h4 {
   max-height: 80px;
 }
 
-#started {
-  overflow: auto;
-  height: 500px;
-}
 #started .container {
   margin: 60px auto;
+}
+#started h3 {
+  text-align: center;
 }
 #started .instructions {
   background: rgba(255, 255, 255, .9);
@@ -58,6 +67,7 @@ h2, h3, h4 {
   border-radius: 10px;
   width: 60%;
   padding: 20px;
+  margin: 0 auto;
 }
 #started .instructions ul {
   margin-left: 30px;
@@ -72,22 +82,33 @@ h2, h3, h4 {
 }
 #cta {
   height: 500px;
-  background: url(img/demo/cta-splash.jpg) no-repeat center center; 
+  background: url(../../img/demo/cta-splash.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  position: relative;
 }
+
+#cta .container {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
 .cta-proposition {
   margin-top: 60px;
 }
 #tools {
   padding: 60px 0px;
-  background: url(img/demo/tools-splash.jpg) no-repeat center center; 
+  background: url(../../img/demo/tools-splash.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+#tools .container {
+  margin-left: 30%;
 }
 #tools h2, #tools .features {
   margin: auto;
@@ -96,7 +117,7 @@ h2, h3, h4 {
 
 @media only screen and (max-width: 720px) {
   #introduction {
-    background: url(img/demo/introduction-mobile.jpg) no-repeat center center;
+    background: url(../../img/demo/introduction-mobile.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
