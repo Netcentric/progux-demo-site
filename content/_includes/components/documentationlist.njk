@@ -1,0 +1,9 @@
+<ul class="documentation__list">
+{% for post in postslist %}
+  <li class="documentation__item">
+    <a class="documentation__link" href="{{ post.url | url }}">
+    {% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}
+    </a>
+  </li>
+{% endfor %}
+</ul>
