@@ -2,12 +2,13 @@
 @import './variables';
 @import './header';
 @import './navigation';
+@import './post';
 @import './footer';
 
 .main {
   &__base {
-    padding: 100px 40px 0;
-    min-height: calc(100vh - 100px);
+    padding-top: 60px;
+    min-height: calc(100vh - 60px);
   }
 
   img {
@@ -67,11 +68,6 @@ img[align="left"] {
 dl {
   clear: both;
   display: block !important;
-}
-
-h1 {
-  font-size:2em;
-  margin: .67em 0
 }
 
 hr {
@@ -157,18 +153,11 @@ input[type=color],input[type=date],input[type=datetime-local],input[type=datetim
 input[type=checkbox]+label,input[type=radio]+label{page-break-before:avoid}
 select[multiple]{min-width:15em}*{border:0;box-sizing:border-box}
 img{max-width:100%}
-body{font-family:Inter UI,sans-serif;}
-section{margin-left:auto;margin-right:auto;width:900px}#menu-toggle{display:none}
+#menu-toggle{display:none}
 #menu-toggle:checked~a{display:block;padding:.75em 0;margin:0 1.5em;text-align:center;border-bottom:1px solid #ccc}
 #menu-toggle:checked~a:last-of-type{padding-bottom:0;border:0}
 #menu-toggle:checked~label{border-bottom:1px solid #aaa;padding-bottom:.75em}
 #menu-toggle:not(:checked)~a{display:none}
-header nav a{font-weight:700;text-decoration:none;font-family:Inter UI,sans-serif;color:#181818;margin-left:1.5em}
-header nav a:first-of-type{margin-left:auto}
-header nav a:last-of-type{margin-right:1.5em}
-header nav label{color:#000;
-cursor:pointer;margin:0;font-style:normal;text-align:right}
-article{max-width:100%;padding:1.5em;width:37.5em;margin:0 auto}
 ol,ul{margin-top:0}
 li dl,li ol,li ul{margin-bottom:0}
 dl{display:inline-block;margin:0 0 1.5em}

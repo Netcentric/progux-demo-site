@@ -56,22 +56,16 @@
   </head>
   <body>
     <header class="header__base">
-      <nav class="navigation__base">
-        <div class="navigation__wrapper" id="nav">
-          <h1><a href="{{ '/' | url }}" title="Homepage">{{ metadata.title }}</a></h1>
-          {%- for entry in collections.all | eleventyNavigation %}
-            <a class="navigation__link" href="{{ entry.url | url }}">{{ entry.title }}</a>
-          {%- endfor %}
-        </div>
-        <div class="navigation__progress" id="reading-progress" aria-hidden="true"></div>
+      <a href="{{ '/' | url }}" title="Homepage">{{ metadata.title }}</a>
+      <nav class="navigation__base" id="nav">
+        {%- for entry in collections.all | eleventyNavigation %}
+          <a class="navigation__link" href="{{ entry.url | url }}">{{ entry.title }}</a>
+        {%- endfor %}
       </nav>
+      <div class="navigation__progress" id="reading-progress" aria-hidden="true"></div>
     </header>
   
     <main class="main__base">
-      <h1 class="main__title">{{ title }}</h1>
-      {% block extraArticleHeader %}{% endblock %}
-      <dialog id="message"></dialog>
-      
       <!-- WHAT IS ?? -->
       {% if googleanalytics %}
       <noscript>
@@ -81,7 +75,9 @@
       {% endif %}
       
       <div class="main__content">
-        {{ content | safe }}
+        {% block content %}
+          {{ content | safe }}
+        {% endblock %}
       </div>
     </main>
 

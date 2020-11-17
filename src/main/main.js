@@ -158,7 +158,7 @@ addEventListener(
   true
 );
 
-if (window.ResizeObserver && document.querySelector("header nav #nav")) {
+if (window.ResizeObserver && document.querySelector("header #nav")) {
   var progress = document.getElementById("reading-progress");
 
   var timeOfLastScroll = 0;

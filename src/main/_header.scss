@@ -1,5 +1,17 @@
 .header {
   &__base {
     display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100vw;
+    padding: .375em 1.5em;
+    background: white;
+    font-weight: 200;
+    text-align: right;
+    box-shadow: 0 5px 3px -2px #e4e4e4;
+    z-index: 1;
   }
 }

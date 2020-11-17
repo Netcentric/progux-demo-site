@@ -4,25 +4,29 @@ templateClass: tmpl-post
 ---
 {% extends "layouts/base.njk" %}
 
-{% block extraArticleHeader %}
-   {% set wc = content | striptags | wordcount %}
-   {% set wPerMinute = (wc / 240) + 1 %}
-   <aside>
-     {{ wPerMinute | round }} min read.
-   </aside>
-{% endblock %}
-
+{% set wc = content | striptags | wordcount %}
+{% set wPerMinute = (wc / 240) + 1 %}
 {% set shareUrl = metadata.url + page.url %}
 
-{% block article %}
-{{ content | safe }}
+{% block content %}
+<article class="post__base">
+  <header class="post__header">
+    <h1 class="post__title">{{ title }}</h1>
+    <div class="post__author">
+      by <a href="{{ authorLink }}" target="_blank" rel="noopener">{{author}}</a>
+    </div>
+    <aside>{{ wPerMinute | round }} min read.</aside>
+  </header>
 
-<h1>🙏🙏🙏</h1>
-<p>
-  Since you've made it this far, <a href="{{ shareUrl | safe }}" on-click="share">sharing</a> this article on your favorite social media network 
-  would be highly appreciated 💖! For feedback, please 
-  <a href="https://twitter.com/{{ metadata.author.twitterHandle }}" target="_blank" rel="noopener">ping me on Twitter.</a>
-</p>
+  <section class="post__content">
+    {{ content | safe }}
+  </section>
+
+  <footer class="post__footer">
+    <p> Since you've made it this far, <a href="{{ shareUrl | safe }}" on-click="share">sharing</a> this article on your favorite social media network 
+      would be highly appreciated 💖! For feedback, please <a href="https://twitter.com/{{ metadata.author.twitterHandle }}" target="_blank" rel="noopener">ping us on Twitter.</a>
+    </p>
+  </footer>
 
 <share-widget>
   <button on-click="share" aria-label="Share" href="{{ shareUrl | safe }}">
@@ -53,5 +57,6 @@ templateClass: tmpl-post
   "description": "{{ content | striptags | truncate(140) }}"
 }
 </script>
+</article>
 
 {% endblock %}
