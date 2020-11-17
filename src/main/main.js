@@ -19,6 +19,8 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+import './main.scss';
+
 const exposed = {};
 if (location.search) {
   var a = document.createElement("a");

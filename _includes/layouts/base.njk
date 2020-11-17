@@ -48,7 +48,9 @@
     <!-- css is inserted by optimize-html custom plugin -->
     {% set isDemoSection = (eleventyNavigation.key === 'Demo') %}
     {% if isDemoSection %}
+    <link href="{{ "/css/demo.min.css" | addHash }}" rel="stylesheet">
     <link href="{{ "/css/dev-bundle.css" | addHash }}" rel="stylesheet">
+    <script async defer src="{{ "/js/demo.min.js" | addHash }}"></script>
     <script async defer src="{{ "/js/dev-bundle.js" | addHash }}"></script>
     {% endif %}
   </head>
