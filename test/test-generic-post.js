@@ -3,8 +3,8 @@ const expect = require("expect.js");
 const { JSDOM } = require("jsdom");
 const readFileSync = require("fs").readFileSync;
 const existsSync = require("fs").existsSync;
-const metadata = require("../_data/metadata.json");
-const GA_ID = require("../_data/googleanalytics.js")();
+const metadata = require("../content/_data/metadata.json");
+const GA_ID = require("../content/_data/googleanalytics.js")();
 
 /**
  * These tests kind of suck and they are kind of useful.
