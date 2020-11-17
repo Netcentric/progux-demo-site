@@ -15,7 +15,9 @@ templateClass: tmpl-post
     <div class="post__author">
       by <a href="{{ authorLink }}" target="_blank" rel="noopener">{{author}}</a>
     </div>
-    <aside>{{ wPerMinute | round }} min read.</aside>
+    <aside class="post__details">
+    <span><time  datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time></span> | <span>{{ wPerMinute | round }} min read.</span>
+    </aside>
   </header>
 
   <section class="post__content">
