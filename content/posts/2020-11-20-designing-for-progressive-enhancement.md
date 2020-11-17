@@ -4,7 +4,7 @@ description: Some description for reaser
 date: 2020-11-20
 tags: second-tag
 layout: layouts/post.njk
-image: https://cdn.pixabay.com/photo/2020/08/30/20/54/rice-field-5530707_1280.jpg
+image: https://images.unsplash.com/photo-1523726491678-bf852e717f6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80
 author: Name Surname
 authorLink: https://my-website.com
 ---

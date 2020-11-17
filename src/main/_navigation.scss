@@ -10,6 +10,11 @@
     text-decoration: none;
     color:#181818;
     margin-left: 1.5em;
+
+    &:hover,
+    &:focus {
+      color: var(--primary);
+    }
   }
 
   &__progress {

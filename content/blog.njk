@@ -8,4 +8,10 @@ eleventyNavigation:
 ---
 
 {% set postslist = collections.posts %}
-{% include "components/postslist.njk" %}
+
+{% block content %}
+<h1 class="blog__title">{{ title }}</h1>
+<div class="blog__content">
+  {% include "components/postslist.njk" %}
+</div>
+{% endblock %}
