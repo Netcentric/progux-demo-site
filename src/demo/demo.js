@@ -6,4 +6,3 @@ import './components/menu/menu.scss';
 
 // Import JS
 import './components/stage/stage.js';
-import './components/header/header.js'
