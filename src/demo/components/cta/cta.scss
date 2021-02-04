@@ -1,5 +1,9 @@
 @import "../../utils/animations.scss";
 
+@mixin noAnimation() {
+    
+} 
+
 .cta {
 
     &__base {
@@ -16,6 +20,14 @@
         .loaded & {
             animation: growLeftRect 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
             animation-delay: 1.4s;
+
+            .reducedMotion-true &,
+            .saveData-true &,
+            .connectionSpeed-low &,
+            .memoryLevel-low &,
+            .cpuLevel-low & {
+                animation: none;
+            }
         }
     }
     
