@@ -1,0 +1,29 @@
+@keyframes growLeftRect {
+    0% {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    100% {
+        clip-path: polygon(0% 0%,100% 0%,100% 100%,0% 100%);
+    }
+}
+
+@keyframes growLeftPolygon {
+    0% {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    100% {
+        clip-path: polygon(0% 0%,100% 0%,90% 100%,0% 100%);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+      -webkit-transform: translateY(40px);
+              transform: translateY(40px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+              opacity: 1;
+    }
+}
