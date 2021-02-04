@@ -20,6 +20,12 @@
 html.connectionSpeed-slow #introduction {
   background: whitesmoke;
 }
+
+body {
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+  font-family: 'Open Sans', sans-serif;
+}
+
 h1 {
   font-size: 25px;
 }
