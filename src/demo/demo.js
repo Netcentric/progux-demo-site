@@ -12,13 +12,11 @@ import './components/parallax/parallax.scss';
 // Import JS
 
 window.addEventListener('load', () => {
-  document.querySelector('body').classList.add('loaded');
-
   function debounce(func, wait, immediate) {
     let timeout;
-    return function() {
+    return function () {
       const context = this, args = arguments;
-      const later = function() {
+      const later = function () {
         timeout = null;
         if (!immediate) func.apply(context, args);
       };
@@ -30,7 +28,7 @@ window.addEventListener('load', () => {
   };
 
   const progUXClasses = Array.from(document.getElementsByTagName('html')[0].classList);
-  const parallaxBlockingClasses = ['reducedMotion-false', 'saveData-true', 'connectionSpeed-slow', 'cpuLevel-low', 'memoryLevel-low'];
+  const parallaxBlockingClasses = ['reducedMotion-true', 'saveData-true', 'connectionSpeed-slow', 'cpuLevel-low', 'memoryLevel-low'];
   let hasParallaxBlocker = false;
 
   for (let i = 0; i < progUXClasses.length; i++) {
@@ -78,24 +76,25 @@ window.addEventListener('load', () => {
 
     observer.observe(parallaxComponent);
   }
+});
 
 const observerSettings = {
-    rootMargin: '0px',
-    threshold: 0.01
+  rootMargin: '0px',
+  threshold: 0.01
 };
 const sections = document.querySelectorAll('section');
 
 const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.intersectionRatio > 0) {
-            observer.unobserve(entry.target);
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) {
+      observer.unobserve(entry.target);
 
-            entry.target.classList.add('loaded');
-        }
-    })
+      entry.target.classList.add('loaded');
+    }
+  })
 
 }, observerSettings);
 
 sections.forEach(section => {
-    observer.observe(section);
+  observer.observe(section);
 });
