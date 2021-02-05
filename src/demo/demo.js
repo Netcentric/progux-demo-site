@@ -5,8 +5,10 @@ import './components/cards/cards.scss';
 import './components/cta/cta.scss';
 import './components/header/header.scss';
 import './components/menu/menu.scss';
+import './components/parallax/parallax.scss';
 
 // Import JS
+import './components/parallax/parallax';
 
 const observerSettings = {
     rootMargin: '0px',
