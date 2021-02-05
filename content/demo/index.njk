@@ -7,61 +7,26 @@ eleventyNavigation:
   order: 1
 ---
 
-<section id="banner">
+<section id="banner" data-callback="addSectionClass">
 	{% include "../_includes/components/banner.njk" %}
 </section>
 
-<section id="cards">
+<section id="cards" data-callback="addSectionClass">
 	{% include "../_includes/components/cards.njk" %}
 </section>
 
-<section id="parallax">
+<section id="parallax" data-callback="moveParallax">
   {% include "../_includes/components/parallax.njk" %}
 </section>
 
-<section id="textblock">
+<section id="textimage" data-callback="addSectionClass">
+  {% include "../_includes/components/textimage.njk" %}
+</section>
+
+<section id="textblock" data-callback="addSectionClass">
   {% include "../_includes/components/textblock.njk" %}
 </section>
 
 <section id="form">
-	{% include "../_includes/components/form.njk" %}
-</section>
-
-<section id="started">
-	<div class="container">
-		<h3>Easy as 1-2-3</h3>
-		<div class="instructions">
-			<p>
-				<span class="icon-number">1</span> Download the zip and extract the files
-			</p>
-			<p>
-				<span class="icon-number">2</span> Add script to your header
-			</p>
-			<p>
-				<span class="icon-number">3</span> Aaaand Start building faster web
-			</p>
-			<p class="text-center text-small">
-				Docs are available if needed <a href="">Link to docs</a>
-			</p>
-		</div>
-	</div>
-</section>
-
-<section id="cta">
-	<div class="container">
-		<div class="cta-proposition">
-			<h2>
-				<span class="text-light">Ready to</span> start building faster web?
-			</h2>
-		</div>
-		<div class="cta-buttons">
-			<button class="button-github"><img class="icon invert home-icon" src="../img/demo/github.svg" alt="GitHub Repository" title="Github Repository" /></button>
-			<button class="button-download">Download</button>
-		</div>
-		<div class="cta-open-source">
-			<p class="text-small text-grey">
-				Free, open-source
-			</p>
-		</div>
-	</div>
+  {% include "../_includes/components/form.njk" %}
 </section>
