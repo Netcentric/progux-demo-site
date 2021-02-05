@@ -17,10 +17,10 @@ section {
   justify-content: center;
 }
 h1 {
-  font-size: 25px;
+  font-size: 32px;
 }
-h2, h3, h4 {
-  color: #000000;
+h2 {
+  font-size: 24px;
 }
 p {
   font-size: 16px;
@@ -28,6 +28,15 @@ p {
 a {
   text-decoration: none;
 }
+section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+#form {
+  background-color: salmon;
+}
+
 .home-icon {
   height: 24px;
 }

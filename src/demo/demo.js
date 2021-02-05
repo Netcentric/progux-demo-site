@@ -3,6 +3,7 @@ import './demo.scss';
 import './components/banner/banner.scss';
 import './components/cards/cards.scss';
 import './components/cta/cta.scss';
+import './components/form/form.scss';
 import './components/header/header.scss';
 import './components/menu/menu.scss';
 import './components/textblock/textblock.scss';
