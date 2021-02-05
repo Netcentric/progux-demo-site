@@ -7,7 +7,6 @@ import './components/menu/menu.scss';
 import './components/parallax/parallax.scss';
 
 // Import JS
-import './components/stage/stage.js';
 import './components/parallax/parallax';
 
 window.addEventListener('load', () => {
