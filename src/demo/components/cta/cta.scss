@@ -1,13 +1,8 @@
 @import "../../utils/animations.scss";
 
-@mixin noAnimation() {
-    
-} 
-
 .cta {
 
     &__base {
-        min-width: 180px;
         height: 50px;
         color: #fff;
         overflow: hidden;
@@ -16,6 +11,7 @@
         justify-content: center;
         position: relative;
         padding: 0 40px;
+        cursor: pointer;
 
         .loaded & {
             animation: growLeftRect 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -27,12 +23,12 @@
             .memoryLevel-low &,
             .cpuLevel-low & {
                 animation: none;
+                clip-path: polygon(0% 0%,100% 0%,100% 100%,0% 100%);
             }
         }
     }
     
     &__bg {
-        border: 1px solid transparent;
         border-radius: 50px;
         box-sizing: border-box;
         display: block;
