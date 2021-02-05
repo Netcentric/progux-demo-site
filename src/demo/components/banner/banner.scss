@@ -1,0 +1,123 @@
+@import "../../utils/animations.scss";
+
+.banner {
+
+    &__base {
+        width: 100vw;
+        height: calc(100vh - 60px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background: url(../../img/demo/user-experience.jpg) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        .reducedMotion-true &,
+        .saveData-true &,
+        .connectionSpeed-low &,
+        .memoryLevel-low &,
+        .cpuLevel-low & {
+            height: 50vh;
+            background: none;
+        }
+
+        @media only screen and (min-width: 768px) {
+            background: url(../../img/demo/user-experience.jpg) no-repeat center center;
+            background-size: cover;
+            justify-content: center;
+
+            .reducedMotion-true &,
+            .saveData-true &,
+            .connectionSpeed-low &,
+            .memoryLevel-low &,
+            .cpuLevel-low & {
+                background: none;
+            }
+        }
+    }
+
+    &__message {
+        clip-path: none;
+        background-color: #00041E;
+        width: 100%;
+        height: 50vh;
+        transition: all 1s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+
+        .loaded & {
+            animation: growLeftRect 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+            .reducedMotion-true &,
+            .saveData-true &,
+            .connectionSpeed-low &,
+            .memoryLevel-low &,
+            .cpuLevel-low & {
+                animation: none;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            width: 40%;
+            height: 40%;
+    
+            .loaded & {
+                animation: growLeftPolygon 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+                .reducedMotion-true &,
+                .saveData-true &,
+                .connectionSpeed-low &,
+                .memoryLevel-low &,
+                .cpuLevel-low & {
+                    width: 100%;
+                    height: 100%;
+                    animation: none;
+                }
+            }    
+        }
+    }
+
+    &__title {
+        opacity: 0;
+
+        .loaded & {
+            animation: slideUp 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay: 1s;
+
+            .reducedMotion-true &,
+            .saveData-true &,
+            .connectionSpeed-low &,
+            .memoryLevel-low &,
+            .cpuLevel-low & {
+                opacity: 1;
+                animation: none;
+            }
+        }
+    }
+
+    &__text {
+        opacity: 0;
+        margin-bottom: 40px;
+        width: 60%;
+
+        .loaded & {
+            animation: slideUp 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay: 1.2s;
+
+            .reducedMotion-true &,
+            .saveData-true &,
+            .connectionSpeed-low &,
+            .memoryLevel-low &,
+            .cpuLevel-low & {
+                opacity: 1;
+                animation: none;
+            }
+        }
+    }
+}
