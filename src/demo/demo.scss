@@ -11,10 +11,13 @@ body {
   margin: 0;
   padding: 0;
 }
-section:not(#parallax) {
+section {
   width: 100vw;
   display: flex;
   justify-content: center;
+}
+section#parallax {
+  display: block;
 }
 h1 {
   font-size: 32px;
