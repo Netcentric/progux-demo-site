@@ -8,29 +8,72 @@ import './components/textimage/textimage.scss';
 import './components/parallax/parallax.scss';
 
 // Import JS
-import './components/parallax/parallax';
 
 window.addEventListener('load', () => {
-    document.querySelector('body').classList.add('loaded');
+  document.querySelector('body').classList.add('loaded');
 
-    const progUXClasses = Array.from(document.getElementsByTagName('html')[0].classList);
-    const parallaxBlockingClasses = ['reducedMotion-true', 'saveData-true', 'connectionSpeed-slow', 'cpuLevel-low', 'memoryLevel-low'];
-    let hasParallaxBlocker = false;
+  function debounce(func, wait, immediate) {
+    let timeout;
+    return function() {
+      const context = this, args = arguments;
+      const later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      const callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
 
-    for (let i = 0; i < progUXClasses.length; i++) {
-      if (parallaxBlockingClasses.includes(progUXClasses[i])) {
-        hasParallaxBlocker = true;
+  const progUXClasses = Array.from(document.getElementsByTagName('html')[0].classList);
+  const parallaxBlockingClasses = ['reducedMotion-false', 'saveData-true', 'connectionSpeed-slow', 'cpuLevel-low', 'memoryLevel-low'];
+  let hasParallaxBlocker = false;
 
-        break;
+  for (let i = 0; i < progUXClasses.length; i++) {
+    if (parallaxBlockingClasses.includes(progUXClasses[i])) {
+      hasParallaxBlocker = true;
+
+      break;
+    }
+  }
+
+  if (!hasParallaxBlocker) {
+    let scrolled = window.scrollY;
+    const parallaxComponent = document.getElementById('parallax');
+    const parallaxImg = parallaxComponent.querySelector('img');
+    let yOffset = window.width < 748 ? 100 : 200;
+
+    const scrollFunction = debounce(() => {
+      const direction = scrolled < window.scrollY ? 'up' : 'down';
+
+      scrolled = window.scrollY;
+
+      if (direction === 'up') {
+        yOffset += 2;
+      } else {
+        yOffset -= 2;
       }
-    }
 
-    if (!hasParallaxBlocker) {
-      const parallax = document.querySelector('.parallax__image');
-      const parallaxSrc = parallax.dataset.src;
+      parallaxImg.style.transform = `translate3d(-50%, ${yOffset}px, 0)`;
+    }, 5);
 
-      parallax.src = parallaxSrc;
-    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          window.addEventListener('scroll', scrollFunction);
+        } else {
+          window.removeEventListener('scroll', scrollFunction);
+        }
+      });
+    });
 
+    const parallax = document.querySelector('.parallax__image');
+    const parallaxSrc = parallax.dataset.src;
 
+    parallax.src = parallaxSrc;
+
+    observer.observe(parallaxComponent);
+  }
 });
