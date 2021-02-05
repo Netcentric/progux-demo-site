@@ -69,10 +69,9 @@ window.addEventListener('load', () => {
       });
     });
 
-    const parallax = document.querySelector('.parallax__image');
-    const parallaxSrc = parallax.dataset.src;
+    const parallaxSrc = parallaxImg.dataset.src;
 
-    parallax.src = parallaxSrc;
+    parallaxImg.src = parallaxSrc;
 
     observer.observe(parallaxComponent);
   }
