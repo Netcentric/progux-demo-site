@@ -21,7 +21,6 @@ const observer = new IntersectionObserver(entries => {
         if (entry.intersectionRatio > 0) {
             observer.unobserve(entry.target);
 
-            console.log(entry);
             entry.target.classList.add('loaded');
         }
     })
