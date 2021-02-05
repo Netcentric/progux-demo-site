@@ -23,7 +23,7 @@
             background: none;
         }
 
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 992px) {
             background: url(../../img/demo/user-experience.jpg) no-repeat center center;
             background-size: cover;
             justify-content: center;
@@ -63,7 +63,7 @@
             }
         }
 
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 992px) {
             width: 40%;
             height: 40%;
     
@@ -87,6 +87,7 @@
         opacity: 0;
 
         .loaded & {
+            --distance: 40px;
             animation: slideUp 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
             animation-delay: 1s;
 
