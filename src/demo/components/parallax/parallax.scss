@@ -4,6 +4,14 @@
     position: relative;
     overflow: hidden;
     height: 500px;
+
+    .reducedMotion-true &,
+    .saveData-true &,
+    .connectionSpeed-slow &,
+    .cpuLevel-low &,
+    .memoryLevel-low & {
+      display: none;
+    }
   }
 
   &__wrapper {
