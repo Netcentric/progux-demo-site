@@ -8,6 +8,8 @@
 @import './post';
 @import './footer';
 @import './sharewidget';
+@import './homeIntro';
+@import './cta';
 
 body {
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
@@ -23,7 +25,7 @@ section {
   justify-content: center;
   padding: 30px 20px;
 
-  @media (min-width:1200px){
+  @media (min-width: 768px){
     justify-content: space-between;
     padding: 70px 50px;
   }
@@ -34,7 +36,7 @@ h1 {
   font-weight: 400;
   line-height: 1.2;
 
-  @media (min-width:1200px){
+  @media (min-width: 768px){
     font-size: 34px;
     line-height: 1.24;
   }
@@ -44,7 +46,7 @@ p {
   font-size: 16px;
   line-height: 1.25;
 
-  @media (min-width:1200px){
+  @media (min-width: 768px){
     font-size: 18px;
     line-height: 1.24;
   }
