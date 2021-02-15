@@ -1,15 +1,10 @@
-.value-proposition {
-  margin-top: 50px;
-}
-html.connectionSpeed-slow #introduction {
-  background: whitesmoke;
-}
-
 body {
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
+  color: #00041E;
 }
 section {
   width: 100vw;
@@ -20,146 +15,25 @@ section#parallax {
   display: block;
 }
 h1 {
+  font-family: 'Poppins', sans-serif;
   font-size: 32px;
+  line-height: 44px;
+  margin: 0;
 }
 h2 {
+  font-family: 'Poppins', sans-serif;
   font-size: 24px;
+  line-height: 40px;
+}
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
 }
 p {
   font-size: 16px;
+  line-height: 28px;
 }
 a {
   text-decoration: none;
-}
-section {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-}
-#form {
-  background-color: salmon;
-}
-
-.home-icon {
-  height: 24px;
-}
-.benefits-boxes {
-  margin: 100px auto;
-  display: flex;
-  justify-content: space-around;
-}
-.benefits-box {
-  width: 25%;
-}
-.benefits-text {
-  padding: 0px 5px;
-}
-.benefits-image {
-  max-width: 160px;
-  max-height: 80px;
-}
-
-#started .container {
-  margin: 60px auto;
-}
-#started h3 {
-  text-align: center;
-}
-#started .instructions {
-  background: rgba(255, 255, 255, .9);
-  border: 2px solid #16b1a3;
-  border-radius: 10px;
-  width: 60%;
-  padding: 20px;
-  margin: 0 auto;
-}
-#started .instructions ul {
-  margin-left: 30px;
-  margin-top: -10px;
-}
-.icon-number {
-  padding: 2px 8px;
-  background: #16b1a3;
-  color: #EEE;
-  border-radius: 99px;
-  margin-right: 10px;
-}
-#cta {
-  height: 500px;
-  background: url(../../img/demo/cta-splash.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  position: relative;
-}
-
-#cta .container {
-  position: absolute;
-  top: 100px;
-  left: 100px;
-}
-
-.cta-proposition {
-  margin-top: 60px;
-}
-#tools {
-  padding: 60px 0px;
-  background: url(../../img/demo/tools-splash.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-#tools .container {
-  margin-left: 30%;
-}
-#tools h2, #tools .features {
-  margin: auto;
-  max-width: 700px;
-}
-
-@media only screen and (max-width: 720px) {
-  #introduction {
-    background: url(../../img/demo/introduction-mobile.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 220px;
-  }
-  h1 {
-    font-size: 20px;
-  }
-  .value-proposition {
-    margin-top: 20px;
-  }
-  .cta-buttons button {
-    padding: 6px 18px;
-    font-size: 22px;
-  }
-  .home-icon {
-    height: 18px;
-  }
-  #benefits .benefits-boxes {
-    margin: 30px auto;
-  }
-  #benefits .container {
-    flex-flow: column wrap;
-  }
-  #benefits .benefits-text {
-    width: 50%;
-    margin: 0px auto 30px auto;
-  }
-  #started .container {
-    margin: 20px auto;
-  }
-  #started .instructions {
-    background: rgba(255, 255, 255, .9);
-    width: 80%;
-    margin: 0px auto;
-  }
-  #tools h2, #tools .features {
-    padding: 0px 30px;
-  }
 }
