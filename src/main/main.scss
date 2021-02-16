@@ -8,8 +8,7 @@
 @import './post';
 @import './footer';
 @import './sharewidget';
-@import './homeIntro';
-@import './cta';
+@import './homeCaseStudies';
 
 body {
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
@@ -56,6 +55,11 @@ a {
   text-decoration: none;
 }
 
+
+.whiteLink {
+  color: white;
+  text-decoration: underline;
+}
 
 .main {
   &__base {
