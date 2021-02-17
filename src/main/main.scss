@@ -13,6 +13,11 @@
 
 @import './components/header/header';
 @import './components/menu/menu';
+@import './homeIntro';
+@import './cta';
+@import './aboutUs';
+@import './homeCards';
+@import './homeCaseStudies';
 
 body {
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
@@ -29,7 +34,6 @@ section {
   padding: 30px 20px;
 
   @media (min-width: 768px){
-    justify-content: space-between;
     padding: 70px 50px;
   }
 }
@@ -42,6 +46,28 @@ h1 {
   @media (min-width: 768px){
     font-size: 34px;
     line-height: 1.24;
+  }
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.22;
+
+  @media (min-width: 768px){
+    font-size: 28px;
+    line-height: 1.24;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 0.9;
+
+  @media (min-width: 768px){
+    font-size: 22px;
+    line-height: 1.2;
   }
 }
 
@@ -59,11 +85,25 @@ a {
   text-decoration: none;
 }
 
+.blueText {
+  color: var(--button-enble-primary);
+}
+
+.whiteLink {
+  color: white;
+  text-decoration: underline;
+}
 
 .main {
+
   &__base {
     padding-top: 60px;
     min-height: calc(100vh - 110px);
+  }
+
+  &__content {
+    position: relative;
+    min-height: 100%;
   }
 
   img {
