@@ -11,6 +11,7 @@
 @import './homeIntro';
 @import './cta';
 @import './aboutUs';
+@import './homeCards';
 
 body {
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
@@ -42,6 +43,28 @@ h1 {
   }
 }
 
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.22;
+
+  @media (min-width: 768px){
+    font-size: 28px;
+    line-height: 1.24;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 0.9;
+
+  @media (min-width: 768px){
+    font-size: 22px;
+    line-height: 1.2;
+  }
+}
+
 p {
   font-size: 16px;
   line-height: 1.25;
@@ -56,6 +79,9 @@ a {
   text-decoration: none;
 }
 
+.blueText {
+  color: var(--button-enble-primary);
+}
 
 .main {
 
@@ -152,7 +178,7 @@ progress{vertical-align:baseline}
 details{display:block}
 summary{display:list-item}[hidden],
 template{display:none}
-  
+
 @media (min-width:1200px){
   table{display:table}
   code,pre,table{overflow-x:auto}
@@ -161,7 +187,7 @@ template{display:none}
   code,kbd{border-radius:.3em;color:#e2777a;padding:0 .3em;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:90%}
   code,kbd{background:#2d2d2d}kbd{color:#7ec699}
   mark{background:#f9c412;padding:0 .3em}}
-  
+
 @supports (font-variation-settings:normal){html{font-family:Inter UI var alt,sans-serif}}
 fieldset{padding:0;margin:0}
 fieldset legend{font-size:150%;margin-bottom:.75em}
