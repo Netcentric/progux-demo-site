@@ -1,0 +1,28 @@
+.cta {
+
+    &__base {
+        width: 100%;
+        display: block;
+        height: 28px;
+        margin-top: 30px;
+        padding: 0 20px;
+        border-radius: 20px;
+        font-size: 10px;
+        line-height: 28px;
+        
+        &--primary {
+            background-color: var(--button-enble-secondary);
+            color: white;
+        }
+
+        &--secondary {
+            background-color: transparent;
+            border: solid 1px var(--button-enble-primary);
+            color: var(--button-enble-primary);
+        }
+
+        @media (min-width: 768px){
+            width: auto;
+        }
+    }
+}
