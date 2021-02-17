@@ -12,6 +12,7 @@
 @import './cta';
 @import './aboutUs';
 @import './homeCards';
+@import './homeCaseStudies';
 
 body {
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
@@ -81,6 +82,11 @@ a {
 
 .blueText {
   color: var(--button-enble-primary);
+}
+
+.whiteLink {
+  color: white;
+  text-decoration: underline;
 }
 
 .main {
