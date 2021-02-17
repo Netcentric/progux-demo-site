@@ -4,6 +4,10 @@
     height: 60px;
     display: flex;
     align-items: center;
+
+    a {
+      color: var(--black);
+    }
   }
 
   &__burgerButton {
