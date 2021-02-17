@@ -4,22 +4,33 @@
     height: 60px;
     background-color: #fff;
     display: flex;
-    margin: 0 10px;
+    margin: 0 20px;
     justify-content: space-between;
     align-items: center;
 
     @media only screen and (min-width: 768px) {
       height: 90px;
+      margin: 0 30px;
     }
 
     @media only screen and (min-width: 1024px) {
       height: 110px;
+      margin: 0 40px;
     }
 
     img {
       margin: 0;
       max-width: 150px;
       height: min-content;
+    }
+
+    .cta__base {
+      display: none;
+
+      @media only screen and (min-width: 1024px) {
+        margin-top: 0;
+        display: block;
+      }
     }
 
     &__logo {

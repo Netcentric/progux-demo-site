@@ -1,6 +1,5 @@
 @import './reset';
 @import './variables';
-//@import 'original_header';
 @import './navigation';
 @import './documentation';
 @import './blog';
@@ -8,11 +7,8 @@
 @import './post';
 @import './footer';
 @import './sharewidget';
-//@import './homeIntro';
-//@import './cta';
-
-@import './components/header/header';
-@import './components/menu/menu';
+@import './header';
+@import './menu';
 @import './homeIntro';
 @import './cta';
 @import './aboutUs';
@@ -97,7 +93,6 @@ a {
 .main {
 
   &__base {
-    padding-top: 60px;
     min-height: calc(100vh - 110px);
   }
 
