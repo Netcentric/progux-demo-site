@@ -18,13 +18,14 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-between;
+        align-items: stretch;
         margin: 0;
         
         @media (min-width: 768px){
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
             margin: 20px 0;
         }
         

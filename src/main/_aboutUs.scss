@@ -137,7 +137,7 @@
 
     &__bg {
         position: absolute;
-        top: 30px;
+        top: 0;
         left: 50px;
         width: calc(100vw - 60px);
         height: calc(100% - 160px);
@@ -147,7 +147,7 @@
 
         @media (min-width: 768px){
             width: calc(100vw - 160px);
-            top: 40px;
+            top: 0;
             left: 110px;
         }
     }

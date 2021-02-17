@@ -1,8 +1,132 @@
 .footer {
-  &__base {
-    background:rgba(0,0,0,.8);
-    color:#fff;
-    padding:3em;
-    text-align:center;
-  }
+
+    &__base {
+        width: 100%;
+        height: 450px;
+        background-color: var(--black);
+        color: white;
+        font-size: 14px;
+        line-height: 2.14;
+
+        @media (min-width: 768px){
+            height: 180px;
+        }
+    }
+
+    &__socialMedia {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        
+        & h2 {
+            z-index: 1;
+            margin-top: 10px;
+        }
+
+        @media (min-width: 768px){
+            height: 180px;
+        }
+    }
+
+    &__socialIcons {
+        z-index: 1;
+        margin-top: 20px;
+
+        & svg {
+            width: 30px;
+            height: auto;
+            fill: white;
+            margin: 0 10px;
+        }
+    }
+
+    &__bg {
+        width: 100%;
+        height: 150px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+
+        @media (min-width: 768px){
+            height: 180px;
+        }
+    }
+
+    &__rectBg {
+        width: 100%;
+        height: 50px;
+        background-color: var(--very-light-pink);
+        display: block;
+    }
+
+    &__roundBg {
+        width: 100%;
+        height: 100px;
+        background-color: var(--very-light-pink);
+        display: block;
+        clip-path: ellipse(60% 100% at 50% 0);
+
+        @media (min-width: 768px){
+            height: 130px;
+            clip-path: ellipse(60% 130% at 50% -30%);
+        }
+    }
+    
+    &__end {
+        width: 100%;
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        @media (min-width: 768px){
+            margin: 0 50px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;    
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    &__logo {
+        width: 25px;
+        height: auto;
+        margin: 20px 0 20px;
+
+        @media (min-width: 768px){
+            width: 46px;
+            margin: 0 0 20px;
+        }
+    }
+
+    &__sponsor {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 50px;
+
+        @media (min-width: 768px){
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    &__ncLogo {
+        margin: 20px 0 0;
+
+        @media (min-width: 768px){
+            margin: 0 0 0 20px;
+        }
+    }
 }
