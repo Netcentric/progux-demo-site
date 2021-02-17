@@ -8,6 +8,9 @@
 @import './post';
 @import './footer';
 @import './sharewidget';
+@import './homeIntro';
+@import './cta';
+@import './aboutUs';
 @import './homeCards';
 
 body {
@@ -25,7 +28,6 @@ section {
   padding: 30px 20px;
 
   @media (min-width: 768px){
-    justify-content: space-between;
     padding: 70px 50px;
   }
 }
@@ -82,9 +84,15 @@ a {
 }
 
 .main {
+
   &__base {
     padding-top: 60px;
     min-height: calc(100vh - 110px);
+  }
+
+  &__content {
+    position: relative;
+    min-height: 100%;
   }
 
   img {
@@ -170,7 +178,7 @@ progress{vertical-align:baseline}
 details{display:block}
 summary{display:list-item}[hidden],
 template{display:none}
-  
+
 @media (min-width:1200px){
   table{display:table}
   code,pre,table{overflow-x:auto}
@@ -179,7 +187,7 @@ template{display:none}
   code,kbd{border-radius:.3em;color:#e2777a;padding:0 .3em;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:90%}
   code,kbd{background:#2d2d2d}kbd{color:#7ec699}
   mark{background:#f9c412;padding:0 .3em}}
-  
+
 @supports (font-variation-settings:normal){html{font-family:Inter UI var alt,sans-serif}}
 fieldset{padding:0;margin:0}
 fieldset legend{font-size:150%;margin-bottom:.75em}
