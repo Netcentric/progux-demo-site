@@ -1,25 +1,52 @@
 .header {
+
   &__base {
+    height: 60px;
+    background-color: #fff;
     display: flex;
+    margin: 0 20px;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 60px;
-    width: 100vw;
-    padding: .375em 1.5em;
-    background: white;
-    font-weight: 200;
-    box-shadow: 0 5px 3px -2px #e4e4e4;
-    z-index: 1;
+
+    @media only screen and (min-width: 768px) {
+      height: 90px;
+      margin: 0 30px;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      height: 110px;
+      margin: 0 50px;
+    }
+
+    .cta__base {
+      display: none;
+
+      @media only screen and (min-width: 1024px) {
+        margin-top: 0;
+        display: block;
+      }
+    }
+  }
+
+  &__logoContainer {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--logo-text);
+
+    @media only screen and (min-width: 768px) {
+      font-size: 20px;
+    }
   }
 
   &__logo {
-    font-weight: bold;
-    font-size: 30px;
-    text-decoration: none;
-    color:#181818;
-    z-index: 2;
+    margin-right: 8px;
+
+    @media only screen and (min-width: 768px) {
+      margin-right: 10px;
+      width: 50px;
+      height: 50px;
+    }
   }
 }
