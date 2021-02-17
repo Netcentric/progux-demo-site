@@ -10,6 +10,7 @@
 @import './sharewidget';
 @import './homeIntro';
 @import './cta';
+@import './aboutUs';
 
 body {
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
@@ -57,9 +58,15 @@ a {
 
 
 .main {
+
   &__base {
     padding-top: 60px;
     min-height: calc(100vh - 110px);
+  }
+
+  &__content {
+    position: relative;
+    min-height: 100%;
   }
 
   img {
