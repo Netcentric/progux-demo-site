@@ -1,0 +1,56 @@
+.menu {
+
+  &__base {
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__burgerButton {
+    position: relative;
+    display: block;
+    line-height: 32px;
+    border: 2px solid transparent;
+    height: 50px;
+    padding: 0 20px;
+
+    & > span {
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 2px;
+      left: 8px;
+      margin: 4px 0 0;
+      border: 1px solid var(--black);
+    }
+
+    & > span:nth-child(1) {
+      top: 9px;
+    }
+
+    & > span:nth-child(2) {
+      top: 17px;
+    }
+
+    & > span:nth-child(3) {
+      top: 25px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__items {
+    display: none;
+
+    @media screen and (min-width: 1024px) {
+      display: inline-flex;
+      list-style: none;
+    }
+  }
+
+  &__item {
+    margin: 0 20px;
+  }
+}

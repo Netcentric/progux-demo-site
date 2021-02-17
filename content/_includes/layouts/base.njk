@@ -55,15 +55,9 @@
     {% endif %}
   </head>
   <body>
-    <header class="header__base">
-      <a class="header__logo" href="{{ '/' | url }}" title="Homepage">{{ metadata.title }}</a>
-      <nav class="navigation__base" id="nav">
-        {%- for entry in collections.all | eleventyNavigation %}
-          <a class="navigation__link" href="{{ entry.url | url }}">{{ entry.title }}</a>
-        {%- endfor %}
-      </nav>
-      <div class="navigation__progress" id="reading-progress" aria-hidden="true"></div>
-    </header>
+
+    {% include "../components/main/header.njk" %}
+
     <main class="main__base">
       <!-- WHAT IS ?? -->
       {% if googleanalytics %}

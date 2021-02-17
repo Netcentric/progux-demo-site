@@ -1,0 +1,29 @@
+.header {
+
+  &__base {
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    margin: 0 10px;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (min-width: 768px) {
+      height: 90px;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      height: 110px;
+    }
+
+    img {
+      margin: 0;
+      max-width: 150px;
+      height: min-content;
+    }
+
+    &__logo {
+      margin: 0;
+    }
+  }
+}
