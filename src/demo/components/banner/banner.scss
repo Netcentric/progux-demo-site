@@ -49,7 +49,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        color: white;
+        color: var(--white);
 
         .loaded & {
             animation: growLeftRect 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
