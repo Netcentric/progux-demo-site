@@ -9,16 +9,28 @@
         border-radius: 20px;
         font-size: 10px;
         line-height: 28px;
+
+        &:focus {
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+        }
         
         &--primary {
-            background-color: var(--button-enble-secondary);
+            background-color: var(--button-enble-primary);
             color: var(--white);
+
+            &:hover {
+                background-color: var(--blueberry);
+            }
         }
 
         &--secondary {
             background-color: transparent;
             border: solid 1px var(--button-enble-primary);
             color: var(--button-enble-primary);
+
+            &:hover {
+                color: var(--black);
+            }
         }
 
         @media (min-width: 768px){

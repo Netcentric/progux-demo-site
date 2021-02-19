@@ -1,12 +1,15 @@
 .footer {
 
     &__base {
-        width: 100%;
+        width: 100vw;
         height: 450px;
         background-color: var(--black);
         color: var(--white);
         font-size: 14px;
         line-height: 2.14;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         @media (min-width: 768px){
             height: 340px;
@@ -75,17 +78,23 @@
     }
     
     &__end {
-        margin: 0 20px;
+        width: 100%;
+        padding: 0 20px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
 
         @media (min-width: 768px){
-            margin: 0 50px;
+            padding: 0 30px;
             flex-direction: row;
             align-items: center;
-            justify-content: space-between;    
+            justify-content: space-between;
+        }
+
+        @media (min-width: 1200px){
+            max-width: 1280px;
+            padding: 0 50px;
         }
     }
 
@@ -96,7 +105,7 @@
     }
 
     &__logo {
-        width: 25px;
+        width: 30px;
         height: auto;
         margin: 20px 0 20px;
 

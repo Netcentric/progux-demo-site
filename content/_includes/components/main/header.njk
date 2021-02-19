@@ -1,11 +1,13 @@
-<header class="header__base">
-  <div class="header__logoContainer">
-    <img class="header__logo" src="../img/progux-logo.svg" width="32" height="32" alt=""><span>ProgUX</span>
+<header>
+  <div class="header__base">
+    <a class="header__logoContainer" href="/">
+      <img class="header__logo" src="../img/progux-logo.svg" width="150" height="53" alt="ProgUX logo">
+    </a>
+
+    {% include "./menu.njk" %}
+
+    <a class="cta__base cta__base--secondary" href="/demo">
+      Visit Demo Page
+    </a>
   </div>
-
-  {% include "./menu.njk" %}
-
-  <a class="cta__base cta__base--secondary" href="#">
-    Visit Demo Page
-  </a>
 </header>

@@ -1,11 +1,10 @@
 .aboutUs {
 
-    &__intro {
-        padding: 30px 20px;
-
-        @media (min-width: 768px){
-            padding: 80px 50px;
-        }
+    &__base {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     &__text {
