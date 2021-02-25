@@ -22,6 +22,9 @@
  // Import main styles for rollup
 import './main.scss';
 
+// Import JS
+import './devGuide.js';
+
 const exposed = {};
 if (location.search) {
   var a = document.createElement("a");

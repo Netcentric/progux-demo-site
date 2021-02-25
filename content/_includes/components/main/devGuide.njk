@@ -1,0 +1,142 @@
+<div class="devGuide__base">
+    <ul class="devGuide__tabs">
+        <li class="devGuide__tab devGuide__tab--selected"><a href="#installation">Installation</a></li>
+        <li class="devGuide__tab"><a href="#usage">Usage</a></li>
+        <li class="devGuide__tab"><a href="#configuration">Configuration</a></li>
+        <li class="devGuide__tab"><a href="#codeExamples">Code Examples</a></li>
+    </ul>
+    <div class="devGuide__section" id="installation">
+        <h2>Installation</h2>
+        <p>
+            To start using ProgUX add the dist/js/bundle.js file into your project and link to it in the <code>&lt;head&gt;</code> of your HTML (we recommend before you load any other JavaScript or CSS). If you prefer to you can also inline the script.
+            <br>
+            <br>
+            Once added the script will run automatically on page load.
+        </p>
+        <div class="devGuide__twoColumns">
+            <div class="devGuide__column">
+                <h3>Production Environment</h3>
+                <p>
+                    To start using ProgUX add the dist/js/bundle.js file into your project and link to it in the <code>&lt;head&gt;</code> of your HTML (we recommend before you load any other JavaScript or CSS). If you prefer to you can also inline the script.
+                    <br>
+                    <br>
+                    Once added the script will run automatically on page load.
+                </p>
+                <span></span>
+            </div>
+            <div class="devGuide__column">
+                <h3>Test Environment</h3>
+                <p>
+                    To start using ProgUX add the dist/js/bundle.js file into your project and link to it in the <code>&lt;head&gt;</code> of your HTML (we recommend before you load any other JavaScript or CSS). If you prefer to you can also inline the script.
+                    <br>
+                    <br>
+                    Once added the script will run automatically on page load.
+                </p>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="devGuide__section" id="usage">
+        <h2>Usage</h2>
+        <p>
+            How your application changes and adapts to the environmental constraints and capabilities is ultimately up to you. ProgUX will not perform any magic that will change your application, it simply provides each developer who uses it a snapshot with which they can make decisions.
+            <br>
+            <br>
+            Ultimately how you use this is up-to-you, below we describe how you can gain access to this information.
+            <br>
+            <br>
+            You will need to clone this repo to your local machine if you wish to alter the default setup in any way
+            <br>
+            <br>
+            Once installed and the application has reloaded developers will have access to an object in the session storage as well as a number of classes to reference in the <code>&lt;html&gt;</code> tag.
+            <br>
+            <br>
+            Once added the script will run automatically on page load.
+        </p>
+        <div class="devGuide__twoColumns">
+            <div class="devGuide__column">
+                <h3>Session Storage Object</h3>
+                <p>
+                    The object will contain the following keys and values:
+                    <br>
+                    <br>
+                    connectionSpeed: String // 'slow/fast/unknown'
+                    cpuLevel: String // 'low/mid/high/unknown'
+                    memoryLevel: String // 'low/mid/high/unknown'
+                    reducedMotion: Boolean
+                    saveData: Boolean
+                    doNotTrack: Boolean
+                </p>
+            </div>
+            <div class="devGuide__column">
+            </div>
+        </div>
+        <div class="devGuide__twoColumns">
+            <div class="devGuide__column">
+                <h3>CSS Classes</h3>
+                <p>
+                    The <code>&lt;html&gt;</code> tag will contain the following classes
+                    <br>
+                    <br>
+                    connectionSpeed-[slow/fast/unknown]
+                    cpuLevel-[low/mid/high/unknown]
+                    memoryLevel-[low/mid/high/unknown]
+                    reducedMotion-[true/false]
+                    saveData-[true/false]
+                    doNotTrack-[true/false]
+                    <br>
+                    <br>
+                    The output will look similar to this                    
+                    <br>
+                    <code>&lt;html class="connectionSpeed-slow cpuLevel-low ...">&gt;</code>
+                    <br>
+                    <br>
+                    You then have access to the classes to make decisions in your code, for example
+                </p>
+            </div>
+        </div>
+        <div class="devGuide__twoColumns" id="configuration">
+            <div class="devGuide__column">
+                <h3>Configuration</h3>
+                <p>
+                    ProgUX provides a config.js file found in src/js.
+                    <br>
+                    <br>
+                    Inside the file you will find an object with the following properties
+                    <br>
+                    <br>
+                    settings:
+                    lowRAM: Number // 0.25, 0.5, 1, 2, 4, 8
+                    lowCPU: Number // > 0
+                    slowConnectionTypes: Array // 'slow-2g','2g','3g', or '4g'
+                    storageLabel: String
+                </p>
+            </div>
+        </div>
+        <div class="devGuide__twoColumns" id="codeExamples">
+            <div class="devGuide__column">
+                <h3>Code Examples</h3>
+                <p>
+                    The <HTML> tag will contain the following classes
+                    <br>
+                    <br>
+                    connectionSpeed-[slow/fast/unknown]
+                    cpuLevel-[low/mid/high/unknown]
+                    memoryLevel-[low/mid/high/unknown]
+                    reducedMotion-[true/false]
+                    saveData-[true/false]
+                    doNotTrack-[true/false]
+                    <br>
+                    <br>
+                    The output will look similar to this                    
+                    <br>
+                    <code>&lt;html class="connectionSpeed-slow cpuLevel-low ...">&gt;</code>
+                    <br>
+                    <br>
+                    You then have access to the classes to make decisions in your code, for example
+                </p>
+            </div>
+        </div>
+    </div>
+    <span class="devGuide__bg"></span>
+</div>

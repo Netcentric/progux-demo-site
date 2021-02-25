@@ -1,0 +1,90 @@
+.devGuide {
+
+    &__base {
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        padding: 50px 30px;
+        position: relative;
+
+        @media (min-width: 768px){
+            max-width: 1280px;
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+        border-radius: 20px;
+        border: solid 1px var(--very-light-pink);
+        background-color: var(--white);
+        list-style: none;
+        position: absolute;
+        top: 20px;
+
+        &--sticky {
+            position: fixed;
+        }
+    }
+
+    &__tab {
+        display: block;
+        font-size: 10px;
+        color: var(--button-enble-primary);
+        transition: all .4s ease-in-out;
+
+        a {
+            display: block;
+            padding: 10px 20px;
+            width: 100%;
+            height: 100%;
+        }
+
+        &--selected {
+            color: var(--white);
+            border-radius: 18px;
+            background-color: var(--button-enble-primary);
+        }
+    }
+
+    &__section {
+        margin-top: 20px;
+        padding: 40px 0;
+    }
+
+    &__twoColumns {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+    
+    &__column {
+        width: calc(50% - 10px);
+
+        span {
+            display: block;
+            width: 100%;
+            height: 150px;
+            background-color: white;
+            margin-top: 20px;
+        }
+    }
+    
+    &__bg {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 60px);
+        background-color: var(--color-background-3);
+        border-radius: 12px;
+        z-index: -1;
+    }
+}

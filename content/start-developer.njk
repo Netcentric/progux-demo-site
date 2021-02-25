@@ -1,0 +1,30 @@
+---
+title: Get started as a developer
+layout: layouts/base.njk
+permalink: /start-developer/
+---
+
+{% set postslist = collections.startDev %}
+
+{% block content %}
+<section class="startDev">
+  <div class="startDev__base">
+    <div class="startDev__text">
+      <h1>Get started as a <span class="startDev__title">developer</span></h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+      </p>
+    </div>
+    <div class="startDev__introImageContainer">
+      <img class="startDev__introImage" src="../img/start/start-dev.svg" alt="Developer illustration" title="Developer illustration">
+    </div>
+  </div>
+</section>
+
+<div class="startDev__content">
+    <h3>Where do I start?</h3>
+    <p class="startDev__description">Scroll down or select any of these tabs</p>
+
+  {% include "components/main/devGuide.njk" %}
+</div>
+{% endblock %}
