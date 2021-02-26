@@ -13,15 +13,6 @@ if (isStartGuide) {
         newTab.classList.add('devGuide__tab--selected');
     }
 
-    function stickTabsToTop() {
-        if (window.pageYOffset > distanceTop) {
-            tabsMenu.classList.add('devGuide__tabs--sticky');
-        } else {
-            tabsMenu.classList.remove('devGuide__tabs--sticky');
-        }
-    }
-
-    window.addEventListener('scroll', stickTabsToTop);
     tabs.forEach(tab => tab.addEventListener('click', changeTab.bind(this)));
 }
 

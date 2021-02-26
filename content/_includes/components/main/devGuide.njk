@@ -3,7 +3,7 @@
         <li class="devGuide__tab devGuide__tab--selected"><a href="#installation">Installation</a></li>
         <li class="devGuide__tab"><a href="#usage">Usage</a></li>
         <li class="devGuide__tab"><a href="#configuration">Configuration</a></li>
-        <li class="devGuide__tab"><a href="#codeExamples">Code Examples</a></li>
+        <li class="devGuide__tab"><a href="#codeExamples">Code</a></li>
     </ul>
     <div class="devGuide__section" id="installation">
         <h2>Installation</h2>
@@ -22,7 +22,7 @@
                     <br>
                     Once added the script will run automatically on page load.
                 </p>
-                <span></span>
+                <span class="placeholder"></span>
             </div>
             <div class="devGuide__column">
                 <h3>Test Environment</h3>
@@ -32,27 +32,34 @@
                     <br>
                     Once added the script will run automatically on page load.
                 </p>
-                <span></span>
+                <span class="placeholder"></span>
             </div>
         </div>
     </div>
     <div class="devGuide__section" id="usage">
         <h2>Usage</h2>
-        <p>
-            How your application changes and adapts to the environmental constraints and capabilities is ultimately up to you. ProgUX will not perform any magic that will change your application, it simply provides each developer who uses it a snapshot with which they can make decisions.
-            <br>
-            <br>
-            Ultimately how you use this is up-to-you, below we describe how you can gain access to this information.
-            <br>
-            <br>
-            You will need to clone this repo to your local machine if you wish to alter the default setup in any way
-            <br>
-            <br>
-            Once installed and the application has reloaded developers will have access to an object in the session storage as well as a number of classes to reference in the <code>&lt;html&gt;</code> tag.
-            <br>
-            <br>
-            Once added the script will run automatically on page load.
-        </p>
+        <div class="devGuide__twoColumns">
+            <div class="devGuide__column">
+                <p>
+                    How your application changes and adapts to the environmental constraints and capabilities is ultimately up to you. ProgUX will not perform any magic that will change your application, it simply provides each developer who uses it a snapshot with which they can make decisions.
+                    <br>
+                    <br>
+                    Ultimately how you use this is up-to-you, below we describe how you can gain access to this information.
+                    <br>
+                    <br>
+                    You will need to clone this repo to your local machine if you wish to alter the default setup in any way
+                    <br>
+                    <br>
+                    Once installed and the application has reloaded developers will have access to an object in the session storage as well as a number of classes to reference in the <code>&lt;html&gt;</code> tag.
+                    <br>
+                    <br>
+                    Once added the script will run automatically on page load.
+                </p>
+            </div>
+            <div class="devGuide__column">
+                <img class="devGuide__useTable" src="../img/start/usage-table.png" alt="Usage table" title="Usage table">
+            </div>
+        </div>
         <div class="devGuide__twoColumns">
             <div class="devGuide__column">
                 <h3>Session Storage Object</h3>
@@ -61,10 +68,15 @@
                     <br>
                     <br>
                     connectionSpeed: String // 'slow/fast/unknown'
+                    <br>
                     cpuLevel: String // 'low/mid/high/unknown'
+                    <br>
                     memoryLevel: String // 'low/mid/high/unknown'
+                    <br>
                     reducedMotion: Boolean
+                    <br>
                     saveData: Boolean
+                    <br>
                     doNotTrack: Boolean
                 </p>
             </div>
@@ -79,10 +91,15 @@
                     <br>
                     <br>
                     connectionSpeed-[slow/fast/unknown]
+                    <br>
                     cpuLevel-[low/mid/high/unknown]
+                    <br>
                     memoryLevel-[low/mid/high/unknown]
+                    <br>
                     reducedMotion-[true/false]
+                    <br>
                     saveData-[true/false]
+                    <br>
                     doNotTrack-[true/false]
                     <br>
                     <br>
@@ -94,10 +111,27 @@
                     You then have access to the classes to make decisions in your code, for example
                 </p>
             </div>
-        </div>
-        <div class="devGuide__twoColumns" id="configuration">
             <div class="devGuide__column">
-                <h3>Configuration</h3>
+                <span class="devGuide__codeBit">
+                    if (html.classList.contains('connectionSpeed-slow') {
+                    <br>
+                    // some decision
+                    <br>
+                    }
+                </span>
+                <div class="devGuide__checkText">
+                    <img class="devGuide__checkIcon" src="../img/icons/checkbox.svg" alt="Check icon" title="Check icon">
+                    <p>
+                        To try to limit the impact of unnecessary JavaScript checks ProgUX will only update the connectionSpeed during a user session. This is simply because we believe that this is the only one of our checks likely to change during a session.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="devGuide__section" id="configuration">
+        <h2>Configuration</h2>
+        <div class="devGuide__twoColumns">
+            <div class="devGuide__column">
                 <p>
                     ProgUX provides a config.js file found in src/js.
                     <br>
@@ -106,16 +140,54 @@
                     <br>
                     <br>
                     settings:
+                    <br>
                     lowRAM: Number // 0.25, 0.5, 1, 2, 4, 8
+                    <br>
                     lowCPU: Number // > 0
+                    <br>
                     slowConnectionTypes: Array // 'slow-2g','2g','3g', or '4g'
+                    <br>
                     storageLabel: String
                 </p>
             </div>
-        </div>
-        <div class="devGuide__twoColumns" id="codeExamples">
             <div class="devGuide__column">
-                <h3>Code Examples</h3>
+                <div class="devGuide__checkText">
+                    <img class="devGuide__checkIcon" src="../img/icons/checkbox.svg" alt="Check icon" title="Check icon">
+                    <p>
+                        Updating the values in settings will set the thresholds tested by ProgUX in your application. For instance, by default slowConnectionTypes is set to ['slow-2g', '2g', '3g'], if you considered '3g' to not be a slow connection you could remove it.
+                    </p>
+                </div>
+                <div class="devGuide__checkText">
+                    <img class="devGuide__checkIcon" src="../img/icons/checkbox.svg" alt="Check icon" title="Check icon">
+                    <p>
+                        Updating the storageLabel in the config will alter the name of the object saved in your session storage.
+                    </p>
+                </div>
+                <div class="devGuide__checkText">
+                    <img class="devGuide__checkIcon" src="../img/icons/checkbox.svg" alt="Check icon" title="Check icon">
+                    <p>
+                        Updating your config changes
+                    </p>
+                </div>
+                <div class="devGuide__checkText">
+                    <img class="devGuide__checkIcon" src="../img/icons/checkbox.svg" alt="Check icon" title="Check icon">
+                    <p>
+                        Once you have made changes to your config you will need to update your bundle JS files.
+                    </p>
+                </div>
+                <div class="devGuide__checkText">
+                    <img class="devGuide__checkIcon" src="../img/icons/checkbox.svg" alt="Check icon" title="Check icon">
+                    <p>
+                        To do this simply run the following command from the root of your local ProgUX folder: npm run build-js
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="devGuide__section" id="codeExamples">
+        <h2>Code Examples</h2>
+        <div class="devGuide__twoColumns">
+            <div class="devGuide__column">
                 <p>
                     The <HTML> tag will contain the following classes
                     <br>

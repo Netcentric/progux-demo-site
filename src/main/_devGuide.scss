@@ -1,36 +1,33 @@
 .devGuide {
 
     &__base {
-        width: 100vw;
-        height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         border-radius: 12px;
-        padding: 50px 30px;
+        margin: 20px 20px;
+        padding: 30px 16px 50px;
         position: relative;
 
         @media (min-width: 768px){
+            width: 100vw;
             max-width: 1280px;
+            align-items: center;
+            margin: 0 0 40px;
+            padding: 20px 30px 70px;
         }
     }
-
+    
     &__tabs {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        display: inline-flex;
         padding: 5px;
         border-radius: 20px;
         border: solid 1px var(--very-light-pink);
         background-color: var(--white);
         list-style: none;
-        position: absolute;
+        position: sticky;
         top: 20px;
-
-        &--sticky {
-            position: fixed;
-        }
     }
 
     &__tab {
@@ -41,9 +38,13 @@
 
         a {
             display: block;
-            padding: 10px 20px;
+            padding: 10px;
             width: 100%;
             height: 100%;
+
+            @media (min-width: 768px){
+                padding: 10px 20px;
+            }
         }
 
         &--selected {
@@ -54,26 +55,79 @@
     }
 
     &__section {
+        width: 100%;
         margin-top: 20px;
-        padding: 40px 0;
+        padding-top: 40px;
+
+        & > p:first-of-type {
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: 768px){
+            margin-top: 40px;
+            padding-top: 20px;
+        }
     }
 
     &__twoColumns {
         width: 100%;
         display: flex;
-        justify-content: space-between;
-        margin-top: 40px;
+        flex-direction: column;
+        margin: 0;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 30px 0;
+        }
     }
     
     &__column {
-        width: calc(50% - 10px);
+        width: 100%;
+        margin-bottom: 20px;
 
-        span {
+        .placeholder {
             display: block;
             width: 100%;
             height: 150px;
             background-color: white;
-            margin-top: 20px;
+            margin: 20px 0;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+        }
+    }
+    
+    &__codeBit {
+        display: block;
+        padding: 20px;
+        background-color: var(--white);
+        border-radius: 12px;
+        font-size: 11px;
+        line-height: 2;
+        margin-bottom: 10px;
+
+        @media screen and (min-width: 768px) {
+            padding: 20px 30px;
+            font-size: 18px;
+        }
+    }
+
+    &__checkText {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__checkIcon {
+        width: 25px;
+        height: 25px;
+        margin: 20px 15px 0 0;
+
+        @media screen and (min-width: 768px) {
+            margin: 20px 30px 0 0;
         }
     }
     
