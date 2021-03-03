@@ -30,7 +30,14 @@
   }
 
   &__icon {
-    transition: 0.2s ease-out;
+    transition: 0.2s ease-in-out;
+
+    .reducedMotion-true &,
+    .connectionSpeed-low &,
+    .memoryLevel-low &,
+    .cpuLevel-low & {
+      transition: none;
+    }
   }
 
   &__panel {
