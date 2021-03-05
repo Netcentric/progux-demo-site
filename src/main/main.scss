@@ -16,6 +16,7 @@
 @import './homeCaseStudies';
 @import './startDev';
 @import './devGuide';
+@import 'accordion/accordion';
 
 html {
   scroll-behavior: smooth;
@@ -188,7 +189,10 @@ hr {
 
 pre {
   font-family: monospace,monospace;
-  font-size:1em
+  font-size:1em;
+  white-space: break-spaces;
+  display: flex;
+  margin-top: 10px;
 }
 
 abbr[title] {
@@ -315,3 +319,9 @@ mark {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 };
+
+.isHidden {
+  display: none;
+  visibility: hidden;
+}
+

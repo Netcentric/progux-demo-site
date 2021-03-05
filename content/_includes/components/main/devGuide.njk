@@ -1,9 +1,9 @@
 <div class="devGuide__base">
     <ul class="devGuide__tabs">
-        <li class="devGuide__tab devGuide__tab--selected"><a href="#installation">Installation</a></li>
-        <li class="devGuide__tab"><a href="#usage">Usage</a></li>
-        <li class="devGuide__tab"><a href="#configuration">Configuration</a></li>
-        <li class="devGuide__tab"><a href="#codeExamples">Code</a></li>
+        <li class="devGuide__tab devGuide__tab--selected"><a href="#installation">Install</a></li>
+        <li class="devGuide__tab"><a href="#usage">Use</a></li>
+        <li class="devGuide__tab"><a href="#configuration">Configure</a></li>
+        <li class="devGuide__tab"><a href="#codeExamples">Coding</a></li>
     </ul>
     <div class="devGuide__section" id="installation">
         <h2>Installation</h2>
@@ -185,28 +185,12 @@
         </div>
     </div>
     <div class="devGuide__section" id="codeExamples">
-        <h2>Code Examples</h2>
+        <h2>Coding</h2>
         <div class="devGuide__twoColumns">
             <div class="devGuide__column">
-                <p>
-                    The <HTML> tag will contain the following classes
-                    <br>
-                    <br>
-                    connectionSpeed-[slow/fast/unknown]
-                    cpuLevel-[low/mid/high/unknown]
-                    memoryLevel-[low/mid/high/unknown]
-                    reducedMotion-[true/false]
-                    saveData-[true/false]
-                    doNotTrack-[true/false]
-                    <br>
-                    <br>
-                    The output will look similar to this                    
-                    <br>
-                    <code>&lt;html class="connectionSpeed-slow cpuLevel-low ...">&gt;</code>
-                    <br>
-                    <br>
-                    You then have access to the classes to make decisions in your code, for example
-                </p>
+                <div class="accordion__container">
+                {% include "components/main/accordion.njk" %}
+                </div>
             </div>
         </div>
     </div>

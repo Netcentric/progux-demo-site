@@ -19,11 +19,12 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
- // Import main styles for rollup
+// Import main styles for rollup
 import './main.scss';
 
 // Import JS
 import './devGuide.js';
+import './accordion/accordion.js';
 
 const exposed = {};
 if (location.search) {
@@ -39,9 +40,11 @@ function tweet_(url) {
     "_blank"
   );
 }
+
 function tweet(anchor) {
   tweet_(anchor.getAttribute("href"));
 }
+
 expose("tweet", tweet);
 
 function share(anchor) {
@@ -58,6 +61,7 @@ function share(anchor) {
     tweet_(url);
   }
 }
+
 expose("share", share);
 
 function message(msg) {
@@ -81,6 +85,7 @@ function prefetch(e) {
   l.href = e.target.href;
   document.head.appendChild(l);
 }
+
 document.documentElement.addEventListener("mouseover", prefetch, {
   capture: true,
   passive: true,
@@ -111,6 +116,7 @@ var timeout = setTimeout(
 );
 
 var ref = +new Date();
+
 function ping(event) {
   var now = +new Date();
   if (now - ref < 1000) {
@@ -124,6 +130,7 @@ function ping(event) {
   });
   ref = now;
 }
+
 addEventListener("pagehide", ping);
 addEventListener("visibilitychange", ping);
 addEventListener(
@@ -141,7 +148,9 @@ addEventListener(
   },
   true
 );
+
 var selectionTimeout;
+
 addEventListener(
   "selectionchange",
   function () {
@@ -166,6 +175,7 @@ if (window.ResizeObserver && document.querySelector("header #nav")) {
 
   var timeOfLastScroll = 0;
   var requestedAniFrame = false;
+
   function scroll() {
     if (!requestedAniFrame) {
       requestAnimationFrame(updateProgress);
@@ -173,10 +183,12 @@ if (window.ResizeObserver && document.querySelector("header #nav")) {
     }
     timeOfLastScroll = Date.now();
   }
+
   addEventListener("scroll", scroll);
 
   var winHeight = 1000;
   var bottom = 10000;
+
   function updateProgress() {
     requestedAniFrame = false;
     var percent = Math.min(
