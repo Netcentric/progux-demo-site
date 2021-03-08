@@ -1,64 +1,83 @@
 .menu {
 
   &__base {
-    height: 60px;
-    display: flex;
     align-items: center;
+    background-color: var(--white);
+    display: none;
+    flex-direction: column;
+    height: calc(100vh - 60px);
+    justify-content: space-between;
+    margin: 0;
+    padding: 30px 20px 20px;
+    position: absolute;
+    top: 60px;
+    width: 100vw;
+    z-index: 1;
+
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      flex-direction: row;
+      width: 100vw;
+      top: -70px;
+      position: relative;
+      height: auto;
+      padding: 0 0 0 0;
+      z-index: unset;
+      margin: 0 auto 0 240px;
+      max-width: 930px;
+      background-color: transparent;
+    }
+
+    .menu--open + & {
+      display: flex;
+    }
+
+    .cta__base {
+      width: calc(100vw - 40px);
+      margin-top: 0;
+
+      @media screen and (min-width: 1024px) {
+        width: auto;
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__items {
+    display: block;
+    font-size: 14px;
+    list-style: none;
+    text-align: center;
+
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      margin-left: auto;
+    }
 
     a {
       color: var(--black);
     }
   }
 
-  &__burgerButton {
-    width: 20px;
-    height: 15px;
-    display: flex;
-    flex-direction: column;
-
-    @media screen and (min-width: 768px) {
-      width: 24px;
-    }
-
-    & > span {
-      display: block;
-      width: 20px;
-      height: 2px;
-      left: 8px;
-      margin: 4px 0 0;
-      border: 1px solid var(--black);
-
-      @media screen and (min-width: 768px) {
-        width: 24px;
-        margin-top: 5px;
-      }
-    }
-
-    & > span:nth-child(1) {
-      margin-top: 0;
-    }
-
-    @media screen and (min-width: 1024px) {
-      display: none;
-    }
-  }
-
-  &__items {
-    display: none;
-
-    @media screen and (min-width: 1024px) {
-      display: inline-flex;
-      list-style: none;
-    }
-  }
-
   &__item {
-    margin: 0 20px;
+    margin: 0 0 30px;
 
     & a:hover,
     & a:focus {
       color: var(--button-enble-primary);
       text-decoration: underline;
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 0;
+      margin-right: 25px;
+    }
+
+    &:last-of-type {
+
+      @media screen and (min-width: 1024px) {
+        margin-right: 0;
+      }
     }
   }
 }

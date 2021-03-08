@@ -37,7 +37,21 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
 
-    <link rel="preconnect" href="/" crossorigin>
+    <script type="text/javascript">
+      const progUXSettings = sessionStorage.getItem('progressiveUserSettings');
+      const saveDataEnabled = progUXSettings.saveData === true;
+      const slowConnection = progUXSettings.connectionSpeed === 'slow';
+      const isSafeToLoadWebFonts = !saveDataEnabled && !slowConnection;
+
+      if (isSafeToLoadWebFonts) {
+        const webFontLink = `<link rel="preconnect" href="https://fonts.gstatic.com">
+                            <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">`;
+
+        const headElement = document.getElementsByTagName('head')[0];
+
+        headElement.insertAdjacentHTML('beforeend', webFontLink);
+      }
+    </script>
     <script async defer src="{{ "/js/min.js" | addHash }}"></script>
     {% if googleanalytics %}
     <script async defer src="{{ "/js/cached.js" | addHash }}"></script>
@@ -52,11 +66,15 @@
     <link href="{{ "/css/dev-bundle.css" | addHash }}" rel="stylesheet">
     <script async defer src="{{ "/js/demo.min.js" | addHash }}"></script>
     <script async defer src="{{ "/js/dev-bundle.js" | addHash }}"></script>
+    {% else %}
+    <link href="{{ "/css/main.css" | addHash }}" rel="stylesheet">
     {% endif %}
   </head>
   <body>
 
     {% include "../components/main/header.njk" %}
+
+    {% include "../components/main/menu.njk" %}
 
     <main class="main__base">
       <!-- WHAT IS ?? -->

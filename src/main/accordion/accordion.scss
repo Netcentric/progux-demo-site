@@ -12,6 +12,13 @@
     &:last-child {
       border: none;
     }
+
+    &:last-of-type {
+
+      .accordion__content {
+        padding-bottom: 20px;
+      }
+    }
   }
 
   &__trigger {
