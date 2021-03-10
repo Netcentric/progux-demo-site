@@ -35,8 +35,8 @@ const CSP = {
     ["default-src", SELF],
     // No plugins
     ["object-src", quote("none")],
-    // Script from same-origin and inline-hashes.
-    ["script-src", SELF, /* Replaced by csp.js plugin */ "HASHES"],
+    // Script from same-origin and inline
+    ["script-src", quote("unsafe-inline"), SELF],
     // Inline CSS is allowed.
     ["style-src", quote("unsafe-inline"), SELF],
     // Images may also come from data-URIs.
