@@ -82,7 +82,7 @@
     
     &__end {
         width: 100%;
-        padding: 0 20px;
+        padding: 50px 20px 0;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -91,7 +91,7 @@
         @media (min-width: 768px){
             padding: 0 30px;
             flex-direction: row;
-            align-items: center;
+            align-items: flex-end;
             justify-content: space-between;
         }
 
@@ -105,6 +105,14 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+
+        .whiteLink {
+            margin-right: 20px;
+        }
+
+        @media (min-width: 768px){
+            flex-direction: row;
+        }
     }
 
     &__logo {
