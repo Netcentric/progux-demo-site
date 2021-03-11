@@ -102,8 +102,7 @@ const optimizeAmp = async (rawContent, outputPath) => {
 
 module.exports = {
   initArguments: {},
-  configFunction: async (eleventyConfig, pluginOptions = {}) => {
-    eleventyConfig.addTransform("purifyCss", purifyCss);
+  configFunction: async (eleventyConfig = {}) => {
     eleventyConfig.addTransform("minifyHtml", minifyHtml);
     eleventyConfig.addTransform("optimizeAmp", optimizeAmp);
   },

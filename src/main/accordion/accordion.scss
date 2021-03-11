@@ -1,8 +1,9 @@
 .accordion {
   &__container {
+    width: 100%;
     background-color: var(--button-enble-primary);
     border-radius: 12px;
-    margin: 0 20px; // TODO: change when page is there
+    margin: 20px 0;
   }
 
   &__item {
@@ -10,6 +11,13 @@
 
     &:last-child {
       border: none;
+    }
+
+    &:last-of-type {
+
+      .accordion__content {
+        padding-bottom: 20px;
+      }
     }
   }
 
@@ -56,6 +64,35 @@
 
     .accordion__icon {
       transform: rotate(180deg);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 992px) {
+      flex-direction: row;
+    }
+  }
+
+  &__text {
+    flex: 1;
+
+    @media screen and (min-width: 992px) {
+      margin-right: 20px;
+    }
+
+    code {
+      word-break: break-word;
+    }
+  }
+
+  &__codeContainer {
+    flex: 1;
+
+    @media screen and (min-width: 992px) {
+      flex: 2;
     }
   }
 }

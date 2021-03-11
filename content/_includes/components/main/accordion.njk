@@ -16,10 +16,24 @@
        aria-labelledby="accordion-toggle-1"
        id="panel-1">
     <div class="accordion__content">
-      <p class="accordion__text">Here, I focus on a range of items and features that we use in life without giving them a second thought such as
-        Coca Cola, body muscles and holding.</p>
-      <pre>
-        <code class="accordion__code"> .save-data { use default fonts }</code>
+      <p class="accordion__text">In order to stop the loading of web fonts we can access the values in the session storage inside our <code>head</code> and depending on the values insert the <code>link</code> tags into the <code>head</code></p>
+      <pre class="accordion__codeContainer">
+        <code class="accordion__code">
+&lt;script&gt;
+  const progUXSettings = sessionStorage.getItem('progressiveUserSettings');
+  const saveDataEnabled = progUXSettings.saveData === true;
+  const slowConnection = progUXSettings.connectionSpeed === 'slow';
+  const isSafeToLoadWebFonts = !saveDataEnabled && !slowConnection;
+
+  if (isSafeToLoadWebFonts) {
+    const webFontLink = `&lt;link rel="preconnect" href="https://fonts.gstatic.com"&gt;
+                        &lt;link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"&gt;`;
+    const headElement = document.getElementsByTagName('head')[0];
+
+    headElement.insertAdjacentHTML('beforeend', webFontLink);
+  }
+&lt;/script&gt;
+        </code>
       </pre>
     </div>
   </div>
@@ -43,66 +57,16 @@
        aria-labelledby="accordion-toggle-2"
        id="panel-2">
     <div class="accordion__content">
-      <p class="accordion__text">Here, I focus on a range of items and features that we use in life without giving them a second thought such as
-        Coca Cola, body muscles and holding.</p>
-      <pre>
-        <code class="accordion__code"> .save-data { use default fonts }</code>
+      <p class="accordion__text">To optimise image delivery we recommend using ProgUX in tandem with lazyload. Add the lazyload by default to your <code>img</code> tags and then use the ProgUX classes in the <code>html</code> tag to display those tags.</p>
+      <pre class="accordion__codeContainer">
+        <code class="accordion__code">
+.connectionSpeed-slow .teaser__image {
+  display: none
+}
+
+&lt;img src='path/to/image.jpg' loading='lazy' class='teaser__image'&gt;
+        </code>
       </pre>
     </div>
   </div>
 </div>
-
-<div class="accordion__item">
-  <h3 class="accordion__header">
-    <button class="accordion__trigger accordion--close"
-            aria-controls="panel-3"
-            id="accordion-toggle-3">
-      <span class="accordion__title">
-        Stage
-      </span>
-      <span class="accordion__icon">
-        <img src="../img/icons/chevron-up.svg" width="20" height="20" alt="Accordion trigger">
-      </span>
-    </button>
-  </h3>
-  <div class="accordion__panel isHidden"
-       role="region"
-       aria-labelledby="accordion-toggle-3"
-       id="panel-3">
-    <div class="accordion__content">
-      <p class="accordion__text">Here, I focus on a range of items and features that we use in life without giving them a second thought such as
-        Coca Cola, body muscles and holding.</p>
-      <pre>
-        <code class="accordion__code"> .save-data { use default fonts }</code>
-      </pre>
-    </div>
-  </div>
-</div>
-
-<div class="accordion__item">
-  <h3 class="accordion__header">
-    <button class="accordion__trigger accordion--close"
-            aria-controls="panel-4"
-            id="accordion-toggle-4">
-      <span class="accordion__title">
-        Gallery
-      </span>
-      <span class="accordion__icon">
-        <img src="../img/icons/chevron-up.svg" width="20" height="20" alt="Accordion trigger">
-      </span>
-    </button>
-  </h3>
-  <div class="accordion__panel isHidden"
-       role="region"
-       aria-labelledby="accordion-toggle-4"
-       id="panel-4">
-    <div class="accordion__content">
-      <p class="accordion__text">Here, I focus on a range of items and features that we use in life without giving them a second thought such as
-        Coca Cola, body muscles and holding.</p>
-      <pre>
-        <code class="accordion__code"> .save-data { use default fonts }</code>
-      </pre>
-    </div>
-  </div>
-</div>
-

@@ -9,15 +9,26 @@
 @import './sharewidget';
 @import './header';
 @import './menu';
+@import './menubutton';
 @import './homeIntro';
 @import './cta';
 @import './aboutUs';
 @import './homeCards';
 @import './homeCaseStudies';
+@import './startDev';
+@import './devGuide';
 @import 'accordion/accordion';
 
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-Regular.ttf')  format('truetype')
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
@@ -78,7 +89,7 @@ h1 {
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 1.22;
 
@@ -100,17 +111,14 @@ h3 {
 }
 
 p {
-  font-size: 16px;
-  line-height: 1.25;
-
-  @media (min-width: 768px){
-    font-size: 18px;
-    line-height: 1.24;
-  }
+  font-size: 14px;
+  line-height: 1.29;
+  margin-top: 20px;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
   cursor: pointer;
 
   &.blueText:hover {
@@ -128,6 +136,20 @@ a {
 
   &:hover {
     color: var(--very-light-pink);
+  }
+}
+
+code {
+  font-family: monospace;
+  font-size: 1em;
+  padding: .1em .4em;
+  border-radius: 4px;
+  color: var(--white);
+  background-color: var(--blueberry);
+  word-break: break-all;
+
+  @media screen and (min-width: 992px) {
+    word-break: initial;
   }
 }
 
@@ -177,7 +199,10 @@ hr {
 
 pre {
   font-family: monospace,monospace;
-  font-size:1em
+  font-size:1em;
+  white-space: break-spaces;
+  display: flex;
+  margin-top: 10px;
 }
 
 abbr[title] {
@@ -186,7 +211,7 @@ abbr[title] {
   text-decoration:underline dotted
 }
 
-code,kbd,samp {
+kbd,samp {
   font-family:monospace,monospace;
   font-size:1em}small{font-size:80%
 }
@@ -228,11 +253,11 @@ template{display:none}
 
 @media (min-width:1200px){
   table{display:table}
-  code,pre,table{overflow-x:auto}
+  pre,table{overflow-x:auto}
   pre{font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace}
   pre code:not([class]){padding:1.5em;overflow-x:scroll}
-  code,kbd{border-radius:.3em;color:#e2777a;padding:0 .3em;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:90%}
-  code,kbd{background:#2d2d2d}kbd{color:#7ec699}
+  kbd{border-radius:.3em;color:#e2777a;padding:0 .3em;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:90%}
+  kbd{background:#2d2d2d}kbd{color:#7ec699}
   mark{background:#f9c412;padding:0 .3em}}
 
 @supports (font-variation-settings:normal){html{font-family:Inter UI var alt,sans-serif}}

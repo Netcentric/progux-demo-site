@@ -2,9 +2,6 @@
 title: Meet the team
 layout: layouts/base.njk
 permalink: /aboutus/
-eleventyNavigation:
-  key: About Us
-  order: 4
 ---
 
 {% set postslist = collections.aboutus %}
@@ -26,10 +23,6 @@ eleventyNavigation:
 
 <div class="aboutUs__content">
   {% include "components/main/aboutUs.njk" %}
-</div>
-
-<div class="accordion__container">
-  {% include "components/main/accordion.njk" %}
 </div>
 
 <span class="aboutUs__bg"></span>
