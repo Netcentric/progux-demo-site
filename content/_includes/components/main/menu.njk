@@ -6,6 +6,10 @@
     </ul>
 
     <a class="cta__base cta__base--primary" href="/demo">
-      Visit Demo Page
-    </a>
+    {% set isDemoSection = (eleventyNavigation.key === 'Demo') %}
+    {% if isDemoSection %}
+      <a class="cta__base cta__base--primary" href="/demo">Back to Home</a>
+    {% else %}
+      <a class="cta__base cta__base--primary" href="/demo">Visit Demo Page</a>
+    {% endif %}
 </nav>
