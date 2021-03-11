@@ -40,8 +40,6 @@
             }
 
             .reducedMotion-true &,
-            .saveData-true &,
-            .connectionSpeed-low &,
             .memoryLevel-low &,
             .cpuLevel-low & {
                 animation: none;
@@ -75,9 +73,8 @@
             background: url(../../img/demo/noSignal.jpg) no-repeat center center;
         }
 
-        .reducedMotion-true &,
         .saveData-true &,
-        .connectionSpeed-low &,
+        .connectionSpeed-slow &,
         .memoryLevel-low &,
         .cpuLevel-low & {
             background: none;
@@ -101,7 +98,7 @@
 
             .reducedMotion-true &,
             .saveData-true &,
-            .connectionSpeed-low &,
+            .connectionSpeed-slow &,
             .memoryLevel-low &,
             .cpuLevel-low & {
                 animation: none;
