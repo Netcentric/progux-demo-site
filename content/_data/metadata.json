@@ -4,7 +4,6 @@
   "domain": "progux.org",
   "description": "Progressive UX Libarary",
   "genre": "Insert a schema.org genre",
-  "googleAnalyticsId": "GA ID. Update me",
   "feed": {
     "subtitle": "ProgUX Blog",
     "filename": "feed.xml",
