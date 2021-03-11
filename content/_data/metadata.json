@@ -1,12 +1,12 @@
 {
   "title": "ProgUX",
-  "url": "https://update-me.com",
-  "domain": "update-me.com",
+  "url": "https://progux.org",
+  "domain": "progux.org",
   "description": "Progressive UX Libarary",
   "genre": "Insert a schema.org genre",
   "googleAnalyticsId": "GA ID. Update me",
   "feed": {
-    "subtitle": "Subtitle. Update me.",
+    "subtitle": "ProgUX Blog",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://update-me.com"
@@ -16,10 +16,10 @@
     "url": "https://update-me.com/feed/feed.json"
   },
   "author": {
-    "name": "Author Name. Update me.",
-    "twitterHandle": "update_me"
+    "name": "ProgUX",
+    "twitterHandle": "ProgUX"
   },
   "publisher": {
-    "name": "Publisher name. Update me."
+    "name": "ProgUX"
   }
 }
