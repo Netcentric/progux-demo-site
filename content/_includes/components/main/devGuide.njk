@@ -2,11 +2,14 @@
     <ul class="devGuide__tabs">
         <li class="devGuide__tab devGuide__tab--selected"><a href="#installation">Install</a></li>
         <li class="devGuide__tab"><a href="#usage">Use</a></li>
-        <li class="devGuide__tab"><a href="#configuration">Configure</a></li>
         <li class="devGuide__tab"><a href="#codeExamples">Coding</a></li>
+        <li class="devGuide__tab"><a href="#configuration">Configure</a></li>
     </ul>
     <div class="devGuide__section" id="installation">
-        <h2>Installation</h2>
+        <div class="devGuide__threeColumns">
+          <h2>Installation</h2>
+          <p>You can find the ProgUX code in <a href="https://github.com/Netcentric/progux">GitHub</a> and in <a href="https://www.npmjs.com/package/@netcentric/progux">NPM</a>. We advise you to take clone the repo to your local machine to have easy access to the files mentioned below.</p>
+        </div>
         <div class="devGuide__twoColumns">
             <div class="devGuide__column">
                 <h3>Production Environment</h3>
@@ -27,9 +30,12 @@
               </span>
             </div>
             <div class="devGuide__column">
-                <h3>Development Environment</h3>
+                <h3>Development & Testing Environment</h3>
                 <p>
-                    To start using ProgUX in your development environment add the <span class="devGuide__filepath">dist/js/dev-bundle.js</span> file into your project and link to it in the <code>&lt;head&gt;</code> of your HTML (we recommend before you load any other JavaScript or CSS). If you prefer to you can also inline the script.
+                  In this version of ProgUX you will have access to a settings modal that will appear (as a cog) in the top right of your screen. Once you open this you are able to toggle settings on and off and trigger a page reload to see the effect your code has on the page.  This makes it much simpler to develop (the alternative might be to continually change the settings in Dev Tools).
+                </p>
+                <p>
+                  To start using ProgUX in your development environment add the <span class="devGuide__filepath">dist/js/dev-bundle.js</span> file into your project and link to it in the <code>&lt;head&gt;</code> of your HTML (we recommend before you load any other JavaScript or CSS). If you prefer to you can also inline the script.
                 </p>
                 <p>
                   Now you will need to call the ProgUX method - <code>progUX();</code>
@@ -39,19 +45,11 @@
     </div>
     <div class="devGuide__section" id="usage">
         <h2>Usage</h2>
-        <div class="devGuide__twoColumns">
-            <div class="devGuide__column">
-              <p>How your application changes and adapts to the environmental constraints and capabilities is ultimately up to you. ProgUX will not perform any magic that will change your application, it simply provides each developer who uses it a snapshot with which they can make decisions.</p>
-              <p>Ultimately how you use this is up-to-you, below we describe how you can gain access to this information.</p>
-              <p>You will need to clone this repo to your local machine if you wish to alter the default setup in any way</p>
-              <p>Once installed and the application has reloaded developers will have access to an object in the session storage as well as a number of classes to reference in the <code>&lt;html&gt;</code> tag.</p>
-            </div>
-            <div class="devGuide__column">
-              <aside>
-                <h3>Project Configuration Example</h3>
-                <img class="devGuide__useTable" src="../img/start/usage-table.png" alt="Usage table" title="Usage table">
-              </aside>
-            </div>
+        <div class="devGuide__threeColumns">
+            <p>How your application changes and adapts to the environmental constraints and capabilities is ultimately up to you. ProgUX will not perform any magic that will change your application, it simply provides each developer who uses it a snapshot with which they can make decisions.</p>
+            <p>Ultimately how you use this is up-to-you, below we describe how you can gain access to this information.</p>
+            <p>You will need to clone this repo to your local machine if you wish to alter the default setup in any way</p>
+            <p>Once installed and the application has reloaded developers will have access to an object in the session storage as well as a number of classes to reference in the <code>&lt;html&gt;</code> tag.</p>
         </div>
         <div class="devGuide__twoColumns">
             <div class="devGuide__column">
@@ -69,6 +67,21 @@
                 </p>
             </div>
             <div class="devGuide__column">
+              <p>You can act get the Session Storage values using vanilla JS, as shown below:</p>
+              <span class="devGuide__codeBit devGuide__codeBit--css">
+                  <code>const progUXSettings = sessionStorage.getItem('progressiveUserSettings');
+  <br>
+  const saveDataEnabled = progUXSettings.saveData === true;
+  <br><br>
+  // now use the value to effect your page
+  <br><br>
+  if (!saveDataEnabled) {
+  <br>
+&nbsp;// Load webfonts
+  <br>
+  }
+                  </code>
+              </span>
               <div class="devGuide__checkText">
                 <img class="devGuide__checkIcon" src="../img/icons/checkbox.svg" alt="Check icon" title="Check icon">
                 <p>
@@ -95,8 +108,12 @@
             <div class="devGuide__column">
                 <p>In your markup you will see something similar to this:</p>
                 <span class="devGuide__codeBit devGuide__codeBit--css">
-                    <code>&lt;html class="connectionSpeed-slow cpuLevel-low ...">&gt;</code>
+                    <code>&lt;html class="connectionSpeed-slow cpuLevel-low ..."></code>
                 </span>
+                <p>With these classes now in your HTML you can use your CSS to effect your application, for example:</p>
+                <span class="devGuide__codeBit devGuide__codeBit--css">
+                      <code>.connectionSpeed--slow .teaser__img {<br>&nbsp;&nbsp;display: none;<br>}</code>
+                  </span>
             </div>
         </div>
       <div class="devGuide__twoColumns">
@@ -114,6 +131,14 @@
           <img width="124" height="408" src="../img/developer/modal.png" alt="">
         </div>
       </div>
+    </div>
+    <div class="devGuide__section" id="codeExamples">
+      <h2>Coding Examples</h2>
+        <div>
+          <div class="accordion__container">
+            {% include "components/main/accordion.njk" %}
+          </div>
+        </div>
     </div>
     <div class="devGuide__section" id="configuration">
         <h2>Configuration</h2>
@@ -166,15 +191,4 @@
             </div>
         </div>
     </div>
-    <div class="devGuide__section" id="codeExamples">
-        <h2>Coding Examples</h2>
-        <div class="devGuide__twoColumns">
-            <div class="devGuide__column">
-                <div class="accordion__container">
-                {% include "components/main/accordion.njk" %}
-                </div>
-            </div>
-        </div>
-    </div>
-    <span class="devGuide__bg"></span>
 </div>

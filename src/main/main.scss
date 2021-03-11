@@ -19,6 +19,11 @@
 @import './devGuide';
 @import 'accordion/accordion';
 
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-Regular.ttf')  format('truetype')
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -141,6 +146,7 @@ code {
   border-radius: 4px;
   color: var(--white);
   background-color: var(--blueberry);
+  word-break: break-all;
 }
 
 .main {

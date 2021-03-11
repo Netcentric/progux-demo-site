@@ -66,4 +66,33 @@
       transform: rotate(180deg);
     }
   }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 992px) {
+      flex-direction: row;
+    }
+  }
+
+  &__text {
+    flex: 1;
+
+    @media screen and (min-width: 992px) {
+      margin-right: 20px;
+    }
+
+    code {
+      word-break: break-word;
+    }
+  }
+
+  &__codeContainer {
+    flex: 1;
+
+    @media screen and (min-width: 992px) {
+      flex: 2;
+    }
+  }
 }
