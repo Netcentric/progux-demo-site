@@ -1,11 +1,12 @@
 <div class="form__base">
     <div class="form__image"></div>
     <form class="form__form" id="contactUs">
-        <h2 class="form__title">Donec cursus porttitor mi in faucibus</h2>
-        <input class="form__input" type="text" id="name" name="fname" placeholder="input">
-        <input class="form__input" type="text" id="name" name="fname" placeholder="input">
-        <input class="form__input" type="text" id="name" name="fname" placeholder="input">
+        <h2 class="form__title">This is just a mock form</h2>
+        <input class="form__input" type="text" id="name" name="fname" placeholder="Name">
+        <input class="form__input" type="text" id="name" name="fname" placeholder="Surname">
+        <input class="form__input" type="text" id="name" name="fname" placeholder="Email">
         <button class="form__submit" form="contactUs" type="submit">
+            {% set cta = { title: 'Contact us', url: '/about-us' } %}
             {% include "./cta.njk" %}
         </button>
     </form>

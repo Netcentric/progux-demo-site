@@ -58,11 +58,22 @@
     &__image {
         width: 100%;
         height: 160px;
-        background: url(../../img/demo/user-experience.jpg) no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+
+        &--animations {
+            background: url(../../img/demo/motion.jpg) no-repeat center center;
+        }
+
+        &--dataSaving {
+            background: url(../../img/demo/saving.jpg) no-repeat center center;
+        }
+
+        &--connection {
+            background: url(../../img/demo/noSignal.jpg) no-repeat center center;
+        }
 
         .reducedMotion-true &,
         .saveData-true &,
