@@ -1,0 +1,77 @@
+.poGuide {
+
+  &__base {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+
+      @media (min-width: 768px){
+          max-width: 1280px;
+          align-items: center;
+      }
+  }
+
+  &__twoColumns {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 20px 0 0;
+
+      @media screen and (min-width: 768px) {
+          flex-direction: row;
+          justify-content: space-between;
+          margin: 30px 0;
+      }
+  }
+
+  &__column {
+    width: 100%;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    &--alignCentre {
+      text-align: center;
+    }
+  }
+
+  &__columnImg {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 70px;
+    }
+  }
+
+  &__checkText {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+
+    p {
+      line-height: 25px;
+    }
+  }
+
+  &__checkIcon {
+      width: 25px;
+      height: 25px;
+      margin: 20px 15px 0 0;
+
+      @media screen and (min-width: 768px) {
+          margin: 20px 30px 0 0;
+      }
+  }
+}
