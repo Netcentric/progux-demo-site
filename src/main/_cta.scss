@@ -9,12 +9,13 @@
         border-radius: 20px;
         font-size: 10px;
         line-height: 28px;
+        text-align: center;
 
         &:focus {
             box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
             border: none;
         }
-        
+
         &--primary {
             background-color: var(--button-enble-primary);
             color: var(--white);

@@ -1,0 +1,32 @@
+---
+title: Get started as a developer
+layout: layouts/base.njk
+permalink: /start-developer/
+---
+
+{% set postslist = collections.startDev %}
+
+{% block content %}
+<section class="startDev">
+  <div class="startDev__base">
+    <div class="startDev__text">
+      <h1>Get started as a <span class="startDev__title">developer</span></h1>
+      <p>
+        Getting ProgUX installed on and adapting your users experiences is simple and fast.
+      </p>
+      <p>
+        Below we have all of the information you will ever need.
+      </p>
+    </div>
+    <div class="startDev__introImageContainer">
+      <img class="startDev__introImage" src="../img/start/start-dev.svg" alt="Developer illustration" title="Developer illustration">
+    </div>
+  </div>
+</section>
+
+<div class="startDev__content">
+
+  {% include "components/main/devGuide.njk" %}
+
+</div>
+{% endblock %}
