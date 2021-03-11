@@ -4,9 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'unsafe-inline', font-src 'self' https://fonts.gstatic.com/; style-src 'self' https://fonts.googleapis.com/">
-    <link rel="icon" href="{{ '/img/favicon/favicon-192x192.png' | addHash }}" type="image/png">
+    
+    <link rel="icon" type="image/png" sizes="192x192" href={{ '/img/favicon/android-icon-192x192.png' | addHash }}>
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/img/favicon/favicon-32x32.png' | addHash }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ '/img/favicon/favicon-96x96.png' | addHash }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/img/favicon/favicon-16x16.png' | addHash }}">
     <meta name="theme-color" content="#f9c412">
     <meta name="robots" content="max-snippet:-1, max-image-preview: large, max-video-preview: -1">
+    
     <title>{{ renderData.title or title or metadata.title | escape }}</title>
     <meta property="og:title" content="{{ renderData.title or title or metadata.title | escape  }}">
     {% set desc = renderData.description or description %}
@@ -59,7 +64,7 @@
       </div>
     </main>
 
-    {% include "../components/demo/footer.njk" %}
+    {% include "../components/main/footer.njk" %}
 
     <!-- Current page: {{ page.url | url }} -->
   </body>

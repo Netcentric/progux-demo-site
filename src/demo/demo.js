@@ -1,11 +1,13 @@
 // Import SCSS
 import './demo.scss';
+
+import '../main/_header.scss';
+import '../main/_footer.scss';
+
 import './components/banner/banner.scss';
 import './components/cards/cards.scss';
 import './components/cta/cta.scss';
-import './components/footer/footer.scss';
 import './components/form/form.scss';
-import './components/header/header.scss';
 import './components/menu/menu.scss';
 import './components/textimage/textimage.scss';
 import './components/textblock/textblock.scss';
