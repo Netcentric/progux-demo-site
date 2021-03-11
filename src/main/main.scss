@@ -147,6 +147,11 @@ code {
   border-radius: 4px;
   color: var(--white);
   background-color: var(--blueberry);
+  word-break: break-all;
+
+  @media screen and (min-width: 992px) {
+    word-break: initial;
+  }
 }
 
 .main {
