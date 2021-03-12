@@ -1,0 +1,29 @@
+---
+title: Get started as a designer
+layout: layouts/base.njk
+permalink: /start-designer/
+---
+
+{% set postslist = collections.startDes %}
+
+{% block content %}
+<section class="startDev">
+  <div class="startDev__base">
+    <div class="startDev__text">
+      <h1>Get started as a <span class="startDev__title">Designer</span></h1>
+      <p>
+        Not everybody is lucky enough to have the newest premium device and a fast internet connection. But this is what we are all used to and have in mind when we design and develop a new website.
+      </p>
+    </div>
+    <div class="startDev__introImageContainer">
+      <img class="startDev__introImage" src="../img/start/start-designer.svg" alt="">
+    </div>
+  </div>
+</section>
+
+<div class="startDes__content">
+
+  {% include "components/main/desGuide.njk" %}
+
+</div>
+{% endblock %}
