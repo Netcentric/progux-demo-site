@@ -41,7 +41,7 @@
     transition: 0.2s ease-in-out;
 
     .reducedMotion-true &,
-    .connectionSpeed-low &,
+    .connectionSpeed-slow &,
     .memoryLevel-low &,
     .cpuLevel-low & {
       transition: none;

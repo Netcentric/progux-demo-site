@@ -1,5 +1,5 @@
 {
-  "name": "ProgUxDemo",
+  "name": "prog-ux-demo",
   "version": "1.0.0",
   "license": "MIT",
   "description": "ProgUX Library demo site",
@@ -41,7 +41,8 @@
     "shorthash": "0.0.2"
   },
   "dependencies": {
-    "@ampproject/toolbox-optimizer": "^2.5.5",
+    "@ampproject/toolbox-optimizer": "^2.7.6",
+    "@netcentric/progux": "^1.0.1",
     "@saschazar/wasm-avif": "^1.0.0",
     "clean-css": "^4.2.3",
     "concurrently": "^5.2.0",

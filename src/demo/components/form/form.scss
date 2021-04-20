@@ -13,12 +13,20 @@
         overflow: hidden;
         opacity: 0;
 
+        .saveData-true &,
+        .connectionSpeed-slow &,
+        .memoryLevel-low &,
+        .cpuLevel-low & {
+            width: 80vw;
+            justify-content: center;
+        }
+
         .loaded & {
             animation: slideUp 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
             .reducedMotion-true &,
             .saveData-true &,
-            .connectionSpeed-low &,
+            .connectionSpeed-slow &,
             .memoryLevel-low &,
             .cpuLevel-low & {
                 opacity: 1;
@@ -31,6 +39,13 @@
             height: 600px;
             flex-direction: row;
             margin: 100px 0;
+
+            .saveData-true &,
+            .connectionSpeed-slow &,
+            .memoryLevel-low &,
+            .cpuLevel-low & {
+                width: 50vw;
+            }
         }
     }
 
@@ -43,13 +58,12 @@
         -o-background-size: cover;
         background-size: cover;
 
-        .reducedMotion-true &,
         .saveData-true &,
-        .connectionSpeed-low &,
+        .connectionSpeed-slow &,
         .memoryLevel-low &,
         .cpuLevel-low & {
             height: 50vh;
-            background: none;    
+            display: none;
         }
 
         @media only screen and (min-width: 992px) {
@@ -87,7 +101,7 @@
 
             .reducedMotion-true &,
             .saveData-true &,
-            .connectionSpeed-low &,
+            .connectionSpeed-slow &,
             .memoryLevel-low &,
             .cpuLevel-low & {
                 opacity: 1;
@@ -118,7 +132,7 @@
 
             .reducedMotion-true &,
             .saveData-true &,
-            .connectionSpeed-low &,
+            .connectionSpeed-slow &,
             .memoryLevel-low &,
             .cpuLevel-low & {
                 animation: none;

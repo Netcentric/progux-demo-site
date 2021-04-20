@@ -1,0 +1,14 @@
+.getStarted {
+  padding: 0;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+  
+  &__base {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+}
