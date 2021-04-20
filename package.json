@@ -22,7 +22,7 @@
     "url": "ssh://git@source.int.netcentric.biz:7999/labs/prog-ux-demo-site.git"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-navigation": "^0.1.3",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
@@ -53,6 +53,7 @@
     "hasha": "^5.2.0",
     "html-minifier": "^4.0.0",
     "image-size": "^0.8.3",
+    "jimp": "^0.16.1",
     "lru-cache": "^5.1.1",
     "mocha": "^8.1.3",
     "phin": "^3.5.1",
