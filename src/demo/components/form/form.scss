@@ -1,0 +1,157 @@
+.form {
+
+    &__base {
+        width: 100vw;
+        max-width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 60px 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgb(49, 49, 49);
+        overflow: hidden;
+        opacity: 0;
+
+        .saveData-true &,
+        .connectionSpeed-slow &,
+        .memoryLevel-low &,
+        .cpuLevel-low & {
+            width: 80vw;
+            justify-content: center;
+        }
+
+        .loaded & {
+            animation: slideUp 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+            .reducedMotion-true &,
+            .saveData-true &,
+            .connectionSpeed-slow &,
+            .memoryLevel-low &,
+            .cpuLevel-low & {
+                opacity: 1;
+                animation: none;
+            }
+        }
+    
+        @media only screen and (min-width: 992px) {
+            max-width: 1200px;
+            height: 600px;
+            flex-direction: row;
+            margin: 100px 0;
+
+            .saveData-true &,
+            .connectionSpeed-slow &,
+            .memoryLevel-low &,
+            .cpuLevel-low & {
+                width: 50vw;
+            }
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 200px;
+        background: url(../../img/demo/user-experience.jpg) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        .saveData-true &,
+        .connectionSpeed-slow &,
+        .memoryLevel-low &,
+        .cpuLevel-low & {
+            height: 50vh;
+            display: none;
+        }
+
+        @media only screen and (min-width: 992px) {
+            height: 100%;
+            width: 50%;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px 60px;
+        box-sizing: border-box;
+
+        @media only screen and (min-width: 992px) {
+            height: 100%;
+            width: 50%;
+            padding: 0;
+        }
+    }
+    
+    &__title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        opacity: 0;
+
+        .loaded & {
+            animation: slideUp 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay: .4s;
+
+            .reducedMotion-true &,
+            .saveData-true &,
+            .connectionSpeed-slow &,
+            .memoryLevel-low &,
+            .cpuLevel-low & {
+                opacity: 1;
+                animation: none;
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+            width: 50%;
+            margin: 30px 0;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        height: 50px;
+        border-radius: 50px;
+        border: 1px solid #00041E;
+        background-color: transparent;
+        margin: 10px 0;
+        padding: 0 20px;
+        box-sizing: border-box;
+        color: #00041E;
+
+        .loaded & {
+            animation: growLeftRect 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay: .8s;
+
+            .reducedMotion-true &,
+            .saveData-true &,
+            .connectionSpeed-slow &,
+            .memoryLevel-low &,
+            .cpuLevel-low & {
+                animation: none;
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+            max-width: 300px;
+        }
+    }
+
+    &__submit {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        margin-top: 20px;
+
+        @media only screen and (min-width: 992px) {
+            margin: 30px 0;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "title": "ProgUX",
+  "url": "https://progux.org",
+  "domain": "progux.org",
+  "description": "Progressive UX Libarary",
+  "genre": "Insert a schema.org genre",
+  "feed": {
+    "subtitle": "ProgUX Blog",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://update-me.com"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://update-me.com/feed/feed.json"
+  },
+  "author": {
+    "name": "ProgUX",
+    "twitterHandle": "ProgUX"
+  },
+  "publisher": {
+    "name": "ProgUX"
+  }
+}

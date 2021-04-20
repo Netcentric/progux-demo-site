@@ -1,0 +1,63 @@
+.menubutton {
+
+  &__base {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    a {
+      color: var(--black);
+    }
+  }
+
+  &__burger {
+    width: 20px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      width: 24px;
+    }
+
+    & > span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      left: 8px;
+      margin: 4px 0 0;
+      border: 1px solid var(--black);
+      transition: all 200ms ease-in-out;
+
+      @media screen and (min-width: 768px) {
+        width: 24px;
+        margin-top: 5px;
+      }
+
+      .menu--open & {
+
+        &:nth-of-type(1) {
+          transform: rotate(45deg) translateX(4px);
+        }
+
+        &:nth-of-type(2) {
+          display: none;
+        }
+
+        &:nth-of-type(3) {
+          transform: rotate(135deg) translateX(-4px);
+        }
+      }
+    }
+
+    & > span:nth-child(1) {
+      margin-top: 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+  }
+}

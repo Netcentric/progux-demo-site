@@ -1,0 +1,20 @@
+.documentation {
+  &__base {
+    display: flex;
+    max-width: 1000px;
+    margin: 50px auto;
+  }
+
+  &__list {
+    margin-right: 30px;
+  }
+
+  &__item {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+
+  &__content {
+    width: 75%;
+  }
+}

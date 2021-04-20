@@ -1,0 +1,31 @@
+---
+layout: layouts/demo.njk
+title: Demo
+templateClass: tmpl-demo
+eleventyNavigation:
+  key: Demo
+  order: 1
+---
+
+{% set cta = { title: 'Check documentation', url: '/get-started' } %}
+<section id="banner">
+	{% include "../_includes/components/demo/banner.njk" %}
+</section>
+
+{% set sectionHeader = { title: 'Click the cog icon', subtitle: 'It will open simulation modal. In there you can select different values for each of the parameters. Change them and click submit. You will notice addition to url and some changes on the site.' } %}
+<section id="textblock">
+  {% include "../_includes/components/demo/textblock.njk" %}
+</section>
+
+<section id="cards">
+	{% include "../_includes/components/demo/cards.njk" %}
+</section>
+
+{% set sectionHeader = { title: 'Session storage and CSS classes', subtitle: 'When changing parameteres you can see data in session storage and classes added to html tag change' } %}
+<section id="textblock">
+  {% include "../_includes/components/demo/textblock.njk" %}
+</section>
+
+<section id="form">
+  {% include "../_includes/components/demo/form.njk" %}
+</section>

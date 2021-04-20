@@ -1,0 +1,48 @@
+@import "../../utils/animations.scss";
+
+.demoCta {
+
+    &__base {
+        height: 50px;
+        color: #fff;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 0 40px;
+        cursor: pointer;
+
+        .loaded & {
+            animation: growLeftRect 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay: 1.4s;
+
+            .reducedMotion-true &,
+            .saveData-true &,
+            .connectionSpeed-low &,
+            .memoryLevel-low &,
+            .cpuLevel-low & {
+                animation: none;
+                clip-path: polygon(0% 0%,100% 0%,100% 100%,0% 100%);
+            }
+        }
+    }
+    
+    &__bg {
+        border-radius: 50px;
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 2px solid transparent;
+        background-color: #e8521f;
+        transition: width 1s ease-in-out;
+        position: absolute;
+        left: 0;
+        z-index: -1;
+
+        .cta-secondary & {
+            border-color: var(--white);
+        }
+    }
+  }

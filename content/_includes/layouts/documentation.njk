@@ -1,0 +1,19 @@
+---
+#layout: layouts/base.njk
+templateClass: tmpl-documentation
+---
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<div class="documentation__base">
+<aside class="documentation__links">
+  {% set postslist = collections.documentation %}
+  {% include "components/main/documentationlist.njk" %}
+</aside>
+<article class="documentation__content">
+  <h1>{{ title }}</h1>
+  {{ content | safe }}
+</article>
+</div>
+
+{% endblock %}

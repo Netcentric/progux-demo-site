@@ -1,0 +1,17 @@
+---
+title: Blog
+layout: layouts/base.njk
+permalink: /blog/
+eleventyNavigation:
+  key: Blog
+  order: 3
+---
+
+{% set postslist = collections.posts %}
+
+{% block content %}
+<h1 class="blog__title">{{ title }}</h1>
+<div class="blog__content">
+  {% include "components/main/postslist.njk" %}
+</div>
+{% endblock %}

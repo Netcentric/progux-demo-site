@@ -1,0 +1,109 @@
+.cards {
+
+    &__base {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 0;
+
+        @media only screen and (min-width: 992px) {
+            flex-direction: row;
+            padding: 100px 0;
+        }
+    }
+
+    &__card {
+        --distance: 60px;
+        width: 280px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px #888888;
+        background-color: var(--white);
+        overflow: hidden;
+        box-sizing: border-box;
+        margin: 20px 0;
+        opacity: 0;
+
+        .loaded & {
+            animation: slideUp 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay: .6s;
+
+            &:first-of-type {
+                animation-delay: .4s;
+            }
+
+            &:last-of-type {
+                animation-delay: .8s;
+            }
+
+            .reducedMotion-true &,
+            .memoryLevel-low &,
+            .cpuLevel-low & {
+                animation: none;
+                opacity: 1;
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+            --distance: 100px;
+            margin: 0 30px;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 160px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        &--animations {
+            background: url(../../img/demo/motion.jpg) no-repeat center center;
+        }
+
+        &--dataSaving {
+            background: url(../../img/demo/saving.jpg) no-repeat center center;
+        }
+
+        &--connection {
+            background: url(../../img/demo/noSignal.jpg) no-repeat center center;
+        }
+
+        .saveData-true &,
+        .connectionSpeed-slow &,
+        .memoryLevel-low &,
+        .cpuLevel-low & {
+            background: none;
+            height: 0;
+        }
+    }
+
+    &__text {
+        margin: 50px 20px;
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        opacity: 0;
+
+        .loaded & {
+            --distance: 40px;
+            animation: slideUp 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay: 1s;
+
+            .reducedMotion-true &,
+            .saveData-true &,
+            .connectionSpeed-slow &,
+            .memoryLevel-low &,
+            .cpuLevel-low & {
+                animation: none;
+                opacity: 1;
+            }
+        }
+    }
+}

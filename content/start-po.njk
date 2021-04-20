@@ -1,0 +1,32 @@
+---
+title: Get started as a Product Owner
+layout: layouts/base.njk
+permalink: /start-productowner/
+---
+
+{% set postslist = collections.startDev %}
+
+{% block content %}
+<section class="startPo">
+  <div class="startPo__base">
+    <div class="startPo__text">
+      <h1>Get started as a <span class="startPo__title">Product Owner</span></h1>
+      <p>
+        As product owner you really want to provide your user with an absolutely sensational user experience, something that leaves them with the best impression possible, but not every user is the same.
+      </p>
+      <p>
+        ProgUX is a lightweight JavaScript library with little overhead in terms of file size or performance impact that can have a tremendous impact helping you to deliver your goals.      
+      </p>
+    </div>
+    <div class="startPo__introImageContainer">
+      <img class="startPo__introImage" src="../img/po/getstarted-po.svg" alt="Developer illustration" title="Developer illustration">
+    </div>
+  </div>
+</section>
+
+<div class="startPo__content">
+
+  {% include "components/main/poGuide.njk" %}
+
+</div>
+{% endblock %}

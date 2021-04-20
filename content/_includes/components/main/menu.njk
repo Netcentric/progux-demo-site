@@ -1,0 +1,14 @@
+<nav class="menu__base">
+    <ul class="menu__items">
+      <li class="menu__item"><a href="/get-started">Get started</a></li>
+      <li class="menu__item"><a href="https://github.com/Netcentric/progux" target="_blank">GitHub</a></li>
+      <li class="menu__item"><a href="/about-us">About Us</a></li>
+    </ul>
+
+    {% set isDemoSection = (eleventyNavigation.key === 'Demo') %}
+    {% if isDemoSection %}
+      <a class="cta__base cta__base--primary" href="/">Back to Home</a>
+    {% else %}
+      <a class="cta__base cta__base--primary" href="/demo">Visit Demo Page</a>
+    {% endif %}
+</nav>

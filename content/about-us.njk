@@ -1,0 +1,32 @@
+---
+title: Meet the team
+layout: layouts/base.njk
+permalink: /about-us/
+eleventyNavigation:
+  key: About Us
+  order: 4
+---
+
+{% set postslist = collections.aboutus %}
+
+{% block content %}
+<section class="aboutUs">
+  <div class="aboutUs__base">
+    <div class="aboutUs__text">
+      <h1>Meet the <span class="aboutUs__title">team</span></h1>
+      <p>
+        Behind every awesome project, there is an awesome team. Meet people who are responsible for ProgUX and feel free to contact any of them in case of any doubts.
+      </p>
+    </div>
+    <div class="aboutUs__introImageContainer">
+      <img class="aboutUs__introImage" src="../img/about-us/zoom-team-illustration.svg" alt="Image of a zoom group meeting" title="Team group image">
+    </div>
+  </div>
+</section>
+
+<div class="aboutUs__content">
+  {% include "components/main/aboutUs.njk" %}
+</div>
+
+<span class="aboutUs__bg"></span>
+{% endblock %}
